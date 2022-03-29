@@ -6,14 +6,17 @@ const twilio = require("twilio");
 const client = new twilio(accountSid, authToken);
 
 export default function handler(req, res) {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "application/json");
+  res
+    .status(200)
+    .json({ message: "Placeholder til we get the rest of the app working" });
+  // res.statusCode = 200;
+  // res.setHeader("Content-Type", "application/json");
 
-  client.messages
-    .create({
-      body: "Hello from Node",
-      to: sampleNumber, // Text this number
-      from: twilioAccountNumber, // From a valid Twilio number
-    })
-    .then((message) => console.log(message.sid));
+  // client.messages
+  //   .create({
+  //     body: "Hello! Testing to see if Twilio API is working!",
+  //     to: sampleNumber, // Text this number
+  //     from: twilioAccountNumber, // From a valid Twilio number
+  //   })
+  //   .then((message) => console.log(message.sid));
 }
