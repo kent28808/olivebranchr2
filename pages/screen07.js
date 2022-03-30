@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from 'react';
-import MicRecorder from 'mic-recorder-to-mp3'; // https://medium.com/front-end-weekly/recording-audio-in-mp3-using-reactjs-under-5-minutes-5e960defaf10
+import MicRecorder from 'mic-recorder-to-mp3'; // https://www.npmjs.com/package/mic-recorder-to-mp3
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
