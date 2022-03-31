@@ -4,7 +4,7 @@ const finalPhonescreen = () => {
     return (  
         <div>
             <h1>One last thing, what's Jen's phone number?</h1>
-            <Link href="/screen15">
+            <Link href="/screen15"passHref>
             <button>Next</button>
             </Link>
         </div>

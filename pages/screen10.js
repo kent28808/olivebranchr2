@@ -6,7 +6,7 @@ const nameScreen = () => {
         <h1>What's your name?</h1>
         <br></br>
         <p>Enter name here</p>
-        <Link href="/screen11">
+        <Link href="/screen11"passHref>
         <button>Next</button>
         </Link>
     </div>

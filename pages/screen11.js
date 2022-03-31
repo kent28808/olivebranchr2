@@ -7,7 +7,7 @@ const partnerNamescreen = () => {
             <h1>Who are you reaching out to?</h1>
             <br></br>
             <p>Enter name here.</p>
-            <Link href="/screen12">
+            <Link href="/screen12"passHref>
             <button>Next</button>
             </Link>
         </div>

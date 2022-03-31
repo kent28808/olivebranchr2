@@ -8,7 +8,7 @@ const initialHelpscreen = () => {
     
             <p>We are here to help.  We will support you send send an Olive Branch- a set of impactful messages to your partner that would facilitate quicker and effective communication.</p>
             
-            <Link href="/screen03">
+            <Link href="/screen03" passHref>
                 <button>Next</button>
             </Link>
         </div>
