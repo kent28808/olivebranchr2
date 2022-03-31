@@ -3,10 +3,10 @@ import Link from "next/link";
 const oliveHelpscreen = () => {
     return (
         <div>
-            <h1>How does Olive Branch help?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h1>What is your name?</h1>
+                <p>Enter your name here</p>
             <Link href="/screen04">
-                <a>Next</a>
+                <button>Next</button>
             </Link>
         </div>
     );

@@ -3,10 +3,13 @@ import Link from "next/link";
 const nameScreen = () => {
     return (
         <div>
-            <h1>What is your name?</h1>
+            <h1>Nice to meet you Cody.
+                Who are you reaching out to?
+            </h1>
+            <br></br>
                 <p>Enter your name here</p>
             <Link href="/screen05">
-                <a>Next</a>
+                <button>Next</button>
             </Link>
         </div>
     );

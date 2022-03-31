@@ -1,14 +1,17 @@
 import Link from "next/link";
 
-const textMsgscreen = () => {
+const partnerNamescreen = () => {
     return (  
         <div>
-            <h1>Great work! Here is a preview of the Olive Branch that you created.</h1>
+            <h1>Nice to meet your Cody.</h1>
+            <h1>Who are you reaching out to?</h1>
+            <br></br>
+            <p>Enter name here.</p>
             <Link href="/screen12">
-                <a>next</a>
+            <button>Next</button>
             </Link>
         </div>
     );
 }
  
-export default textMsgscreen;
+export default partnerNamescreen;
