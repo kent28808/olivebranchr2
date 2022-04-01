@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
       <div>
-      <Link href="/screen02">
+      <Link href="/screen02"passHref>
         <h1>Olive Branch</h1>
       </Link>
       </div>
