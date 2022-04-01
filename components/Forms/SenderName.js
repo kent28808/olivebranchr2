@@ -1,18 +1,25 @@
-import { useContext } from "react";
-import { MessageContext } from "../../context/MessageContext";
+import { useContext, useState } from "react";
+import { MessageContext, setMessageValues } from "../../context/MessageContext";
 
 export default function SenderName(props) {
-  const value = useContext(MessageContext);
-  console.log(`This is the currrent context: ${value}`);
+  const context = useContext(MessageContext);
+  const { setMessageValues, message } = context;
 
   const handleSubmit = (e) => {
-    console.log("This is e: ", e.targe.value);
+    e.preventDefault();
+
+    let recipientName = e.target.recipientname.value;
+    let keyName = "recipientName";
+    setMessageValues(keyName, recipientName); // State is not updating properly
+
+    console.log("Message2:", message); // Console.log shows blank string here but on Screen Page, state is updated
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor='senderName'>Sender</label>
-      <input type='text' id='sender' name='sender' required />
+      <label htmlFor='sendername'>Sender</label>
+
+      <input type='text' id='sender' name='recipientname' required />
       <button type='submit'>Submit</button>
     </form>
   );

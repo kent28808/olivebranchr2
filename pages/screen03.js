@@ -4,12 +4,14 @@ import { MessageContext } from "../context/MessageContext"; // Wrap in {} b/c ex
 import SenderName from "../components/Forms/SenderName";
 
 export default function nameScreen() {
-  // const value = useContext(MessageContext);
+  const { message } = useContext(MessageContext);
   // console.log(value);
+  console.log("Message on Page 3", message); // State updated properly
 
   return (
     <div>
       <SenderName />
+      <p>{message.recipientName}</p>
       <h1>What is your name?</h1>
       <p>Enter your name here</p>
       <Link href='/screen04' passHref>
