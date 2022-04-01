@@ -10,8 +10,13 @@ export default function MessageProvider(props) {
     recipientNumber: 0,
   });
 
+  const setMessageValues = (values) => {
+    console.log(`This is ${message} and this is ${values}`);
+    setMessage({ ...message, values });
+  };
+
   return (
-    <MessageContext.Provider value={message}>
+    <MessageContext.Provider value={(message, setMessageValues)}>
       {props.children}
     </MessageContext.Provider>
   );
