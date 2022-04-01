@@ -62,7 +62,7 @@ class App extends React.Component {
             <button onClick={this.stop} disabled={!this.state.isRecording}>Stop</button>
             <audio src={this.state.blobURL} controls="controls" />
           </header>
-          <Link href="/screen06">
+          <Link href="/screen06"passHref>
           <button>Next</button>
         </Link>
         </div>

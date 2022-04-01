@@ -7,7 +7,7 @@ const phoneScreen = () => {
             <p>So we can send the Olive Branch for you.</p>
             <br></br>
             <p>Enter mobile number here</p>
-            <Link href="/screen10">
+            <Link href="/screen10"passHref>
             <button>Next</button>
             </Link>
         </div>

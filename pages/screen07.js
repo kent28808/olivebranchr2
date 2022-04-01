@@ -6,7 +6,7 @@ const timerScreen = () => {
             <h1>Lastly, let Jen know when you'd be ready to talk again.</h1>
             <br></br>
             <p>Timer</p>
-            <Link href="/screen08">
+            <Link href="/screen08"passHref>
             <button>Next</button>
             </Link>
         </div>

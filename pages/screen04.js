@@ -9,7 +9,7 @@ const name2screen = () => {
     <div>
       <h1>Who are you reaching out to?</h1>
       <p>Enter your partners name {value.recipient}</p>
-      <Link href='/screen05'>
+      <Link href='/screen05'passHref>
         <button>next</button>
       </Link>
     </div>

@@ -4,7 +4,7 @@ const finalPhotoscreen = () => {
     return (  
         <div>
             <h1>Looks great!</h1>
-            <Link href="/screen14">
+            <Link href="/screen14"passHref>
             <button>Next</button>
             </Link>
         </div>
