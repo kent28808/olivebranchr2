@@ -1,13 +1,14 @@
 import Link from "next/link";
 
-const finalScreen = () => {
+const finalPhotoscreen = () => {
     return (  
         <div>
-            <h1>Congratulations Cody!</h1>
-            <Link href="/screen02">
+            <h1>Looks great!</h1>
+            <Link href="/screen14"passHref>
+            <button>Next</button>
             </Link>
         </div>
     );
 }
  
-export default finalScreen;
+export default finalPhotoscreen;

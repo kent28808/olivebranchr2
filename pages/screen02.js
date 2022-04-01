@@ -3,10 +3,13 @@ import Link from "next/link";
 const initialHelpscreen = () => {
     return (
         <div>
-            <h1>We're here to help.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <Link href="/screen03">
-                <a>Yes</a>
+            <h1>How does Olive Branch work?</h1>
+            <p>We know fights between couples can be tough.  The uncomfortable silent hours that follow are even harder.</p>
+    
+            <p>We are here to help.  We will support you send send an Olive Branch- a set of impactful messages to your partner that would facilitate quicker and effective communication.</p>
+            
+            <Link href="/screen03" passHref>
+                <button>Next</button>
             </Link>
         </div>
     );

@@ -3,9 +3,9 @@ import Link from "next/link";
 const phoneScreen = () => {
     return (
         <div>
-            <h1>What's Jen's phone number?</h1>
-            <Link href="/screen13">
-                <a>next</a>
+            <h1>First, let's make sure Jen can HEAR your commitment.</h1>
+            <Link href="/screen13"passHref>
+            <button>Next</button>
             </Link>
         </div>
     );

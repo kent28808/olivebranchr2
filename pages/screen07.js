@@ -1,14 +1,16 @@
 import Link from "next/link";
 
-const recordingScreen = () => {
+const timerScreen = () => {
     return (  
-        <div>
-        <h1>Next, let's make sure your partner can hear you.</h1>
-        <Link href="/screen08">
-            <a>next</a>
-        </Link>
-    </div>
+       <div>
+            <h1>Lastly, let Jen know when you'd be ready to talk again.</h1>
+            <br></br>
+            <p>Timer</p>
+            <Link href="/screen08"passHref>
+            <button>Next</button>
+            </Link>
+        </div>
     );
 }
  
-export default recordingScreen;
+export default timerScreen;
