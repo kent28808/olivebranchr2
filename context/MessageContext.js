@@ -4,8 +4,10 @@ export const MessageContext = createContext("Hello");
 
 export default function MessageProvider(props) {
   const [message, setMessage] = useState({
-    sender: "Cody",
-    recipient: "Jen",
+    senderName: "",
+    recipientName: "",
+    message: "",
+    recipientNumber: 0,
   });
 
   return (
