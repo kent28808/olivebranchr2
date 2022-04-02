@@ -10,10 +10,10 @@ export default function MessageProvider(props) {
     recipientNumber: 0,
   });
 
-  const setMessageValues = (key, values) => {
+  const setMessageValues = (key, value) => {
     setMessage({
       ...message,
-      [key]: values,
+      [key]: value,
     });
   };
 
