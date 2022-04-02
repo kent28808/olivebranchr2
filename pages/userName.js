@@ -5,13 +5,11 @@ import SenderName from "../components/Forms/SenderName";
 
 export default function nameScreen() {
   const { message } = useContext(MessageContext);
-  // console.log(value);
-  console.log("Message on Page 3", message); // State updated properly
 
   return (
     <div>
       <h1>What's your name?</h1>
-      <SenderName />
+      <SenderName data='recipientName' />
       <p>{message.recipientName}</p>
       <Link href='/receipentName' passHref>
         <button>{">>"}</button>

@@ -1,5 +1,4 @@
 import React, { createContext, useState } from "react";
-import { useContext } from "react/cjs/react.production.min";
 
 export const MessageContext = createContext("Hello");
 
@@ -12,12 +11,10 @@ export default function MessageProvider(props) {
   });
 
   const setMessageValues = (key, values) => {
-    console.log("values", values, "key", key);
-    setMessage((prevValues) => ({
-      ...prevValues,
+    setMessage({
+      ...message,
       [key]: values,
-    }));
-    console.log("Message:", message); // Does not show updated message here
+    });
   };
 
   return (
@@ -26,5 +23,3 @@ export default function MessageProvider(props) {
     </MessageContext.Provider>
   );
 }
-
-// export const useMessageData = () => useContext(MessageContext);
