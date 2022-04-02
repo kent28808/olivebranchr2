@@ -1,14 +1,9 @@
-import Link from "next/link";
-
 const finalOlivescreen = () => {
-    return (  
-        <div>
-            <h1>Olive Branch successfully sent to Jen.</h1>
-            <Link href="/screen16"passHref>
-            <button>Next</button>
-            </Link>
-        </div>
-    );
-}
- 
+  return (
+    <div>
+      <h1>Olive Branch successfully sent to Jen.</h1>
+    </div>
+  );
+};
+
 export default finalOlivescreen;
