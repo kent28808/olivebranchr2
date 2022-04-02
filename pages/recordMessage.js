@@ -70,7 +70,7 @@ class App extends React.Component {
           </button>
           <audio src={this.state.blobURL} controls='controls' />
         </header>
-        <Link href='/screen06' passHref>
+        <Link href='/previewRecording' passHref>
           <button>Next</button>
         </Link>
       </div>

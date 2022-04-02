@@ -10,12 +10,11 @@ export default function nameScreen() {
 
   return (
     <div>
+      <h1>What's your name?</h1>
       <SenderName />
       <p>{message.recipientName}</p>
-      <h1>What is your name?</h1>
-      <p>Enter your name here</p>
-      <Link href='/screen04' passHref>
-        <button>Next</button>
+      <Link href='/receipentName' passHref>
+        <button>{">>"}</button>
       </Link>
     </div>
   );

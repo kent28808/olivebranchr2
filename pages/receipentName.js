@@ -7,10 +7,10 @@ const name2screen = () => {
   console.log(value);
   return (
     <div>
-      <h1>Who are you reaching out to?</h1>
-      <p>Enter your partners name {value.recipient}</p>
-      <Link href='/screen05' passHref>
-        <button>next</button>
+      <h1>Hey Cody, who are you reaching out to?</h1>
+      {/* Insert form component here */}
+      <Link href='/uploadPhoto' passHref>
+        <button>{">>"}</button>
       </Link>
     </div>
   );
