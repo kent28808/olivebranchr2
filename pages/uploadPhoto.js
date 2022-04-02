@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const commitmentScreen = () => {
+const uploadPhotoScreen = () => {
   return (
     <div>
       <h1>Next, let's make sure your partner can see you.</h1>
@@ -15,4 +15,4 @@ const commitmentScreen = () => {
   );
 };
 
-export default commitmentScreen;
+export default uploadPhotoScreen;

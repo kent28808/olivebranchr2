@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const recordingConfirmationscreen = () => {
+const previewMessageScreen = () => {
   return (
     <div>
       <h1>
@@ -9,11 +9,11 @@ const recordingConfirmationscreen = () => {
 
       <p>preview image of text message, audio recording and photo?</p>
       <br></br>
-      <Link href='/receipentNumber' passHref>
+      <Link href='/recipientNumber' passHref>
         <button>Next</button>
       </Link>
     </div>
   );
 };
 
-export default recordingConfirmationscreen;
+export default previewMessageScreen;
