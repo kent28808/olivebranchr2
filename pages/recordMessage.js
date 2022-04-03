@@ -32,6 +32,7 @@ class App extends React.Component {
       .then(([buffer, blob]) => {
         const blobURL = URL.createObjectURL(blob); //blob is the captured mp3 audio
         this.setState({ blobURL, isRecording: false });
+        console.log(blobURL)
       })
       .catch((e) => console.log(e));
   };
