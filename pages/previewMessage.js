@@ -14,9 +14,9 @@ export default function previewMessageScreen() {
       </p>
       <br></br>
       <p>
-        Hey {message.recipientName},\n you just recieved an Olive Branch from
-        Cody, who wants to reconnect with you. Tap the voice message below to
-        listen!
+        Hey {message.recipientName}, you just recieved an Olive Branch from{" "}
+        {message.senderName}, who wants to reconnect with you. Tap the voice
+        message below to listen!
       </p>
       <Link href='/recipientNumber' passHref>
         <button>Next</button>
