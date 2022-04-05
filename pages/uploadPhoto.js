@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const uploadPhotoScreen = () => {
+export default function uploadPhotoScreen() {
   return (
     <div>
       <h1>Next, let's make sure your partner can see you.</h1>
@@ -13,6 +13,4 @@ const uploadPhotoScreen = () => {
       </Link>
     </div>
   );
-};
-
-export default uploadPhotoScreen;
+}

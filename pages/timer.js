@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const timerScreen = () => {
+export default function timerScreen() {
   return (
     <div>
       <h1>Lastly, let Jen know when you'd be ready to talk again.</h1>
@@ -11,6 +11,4 @@ const timerScreen = () => {
       </Link>
     </div>
   );
-};
-
-export default timerScreen;
+}

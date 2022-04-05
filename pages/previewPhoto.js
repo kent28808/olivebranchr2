@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const previewPhoto = () => {
+export default function previewPhoto() {
   return (
     <div>
       <h1>Looks great!</h1>
@@ -11,6 +11,4 @@ const previewPhoto = () => {
       </Link>
     </div>
   );
-};
-
-export default previewPhoto;
+}

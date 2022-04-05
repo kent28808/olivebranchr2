@@ -1,12 +1,10 @@
 import "../styles/globals.css";
 import MessageProvider from "../context/MessageContext"; // Import w/o wrapping in {} or will show error b/c exporting w/ word "default"
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   return (
     <MessageProvider>
       <Component {...pageProps} />
     </MessageProvider>
   );
 }
-
-export default MyApp;

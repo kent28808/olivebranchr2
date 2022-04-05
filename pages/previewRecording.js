@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const previewRecording = () => {
+export default function previewRecording() {
   return (
     <div>
       <h1>Sounds great!</h1>
@@ -11,6 +11,4 @@ const previewRecording = () => {
       </Link>
     </div>
   );
-};
-
-export default previewRecording;
+}

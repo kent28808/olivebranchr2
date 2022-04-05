@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const initialHelpscreen = () => {
+export default function initialHelpscreen() {
   return (
     <div>
       <h1>Recovering a fight with loved ones it's stressful.</h1>
@@ -20,6 +20,4 @@ const initialHelpscreen = () => {
       </Link>
     </div>
   );
-};
-
-export default initialHelpscreen;
+}
