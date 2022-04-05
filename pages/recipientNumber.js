@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import GetFormData from "../components/Forms/GetFormData";
-
 export default function recipientPhoneScreen() {
   const { message } = useContext(MessageContext);
 

@@ -1,9 +1,7 @@
 import { useContext } from "react";
 import { MessageContext } from "../../context/MessageContext";
-
 export default function GetFormData(props) {
-  const context = useContext(MessageContext);
-  const { setMessageValues } = context;
+  const { setMessageValues } = useContext(MessageContext);
 
   async function handleSubmit(key, event) {
     event.preventDefault();
