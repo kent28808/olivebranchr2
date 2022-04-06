@@ -7,7 +7,7 @@ export default function previewMessageScreen() {
 
   return (
     <div>
-      <h1>Thanks for sharing!</h1>
+      <h3>Thanks for sharing!</h3>
       <p>
         Here's a preview of the Olive Branch that we created for you to
         {message.recipientName}

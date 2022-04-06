@@ -53,7 +53,7 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <h1>First, let's make sure Jen can HEAR your commitment.</h1>
+        <h3>First, let's make sure Jen can HEAR your commitment.</h3>
         <p>Record below Commitment Declaration as a voice message for Jen.</p>
         <br></br>
         <p> Hey Jen,</p>

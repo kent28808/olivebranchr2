@@ -8,7 +8,7 @@ export default function recipientNameScreen() {
 
   return (
     <div>
-      <h1>Hey {message.senderName}, who are you reaching out to?</h1>
+      <h3>Hey {message.senderName}, who are you reaching out to?</h3>
       <GetFormData
         dataType='text'
         msgKey='recipientName'

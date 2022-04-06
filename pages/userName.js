@@ -8,7 +8,7 @@ export default function userNameScreen() {
 
   return (
     <div>
-      <h1>What's your name?</h1>
+      <h3>What's your name?</h3>
       <GetFormData dataType='text' msgKey='senderName' inputId='sender-name' />
       <p>{`${JSON.stringify(message)}`}</p>
       <Link href='/recipientName' passHref>

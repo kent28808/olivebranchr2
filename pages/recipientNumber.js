@@ -8,7 +8,7 @@ export default function recipientPhoneScreen() {
 
   return (
     <div>
-      <h1>OK. What's {message.recipientName}'s phone number?</h1>
+      <h3>OK. What's {message.recipientName}'s phone number?</h3>
       <GetFormData
         dataType='tel'
         msgKey='recipientNumber'

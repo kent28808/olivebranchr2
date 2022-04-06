@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Raleway:wght@400;500&display=swap");
+
+// Fonts
+$alegreya-regular: "Alegreya", serif;
+$raleway-regular: "Raleway", sans-serif;
+
+// Primary Colors
+$redwood: #8f5949;
+$hunter-green: #31542c;
+$jet: #333;
+
+// Secondary Colors
+$xanadu: #7a8778;
+$gainsboro: #e1e1e1;
+
+h1 {
+  width: 314px;
+  height: 60px;
+  margin: 0 186px 385px 0;
+  font-family: $alegreya-regular;
+  font-size: 60px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: $redwood;
+}
+
+h3 {
+  width: 688.8px;
+  height: 40px;
+  margin: 5px 0 169px 5px;
+  font-family: $alegreya-regular;
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  color: $redwood;
+}
+
+p {
+  width: 648px;
+  font-family: $raleway-regular;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333;
+}

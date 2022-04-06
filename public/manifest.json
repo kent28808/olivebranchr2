@@ -10,23 +10,18 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/icon-192x192.png",
-      "sizes": "192x192",
+      "src": "/ob-500x388.png",
+      "sizes": "500x388",
       "type": "image/png"
     },
     {
-      "src": "/icon-256x256.png",
-      "sizes": "256x256",
+      "src": "/ob-1000x776.png",
+      "sizes": "1000x776",
       "type": "image/png"
     },
     {
-      "src": "/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png"
-    },
-    {
-      "src": "/icon-512x512.png",
-      "sizes": "512x512",
+      "src": "/ob-1500x1164.png",
+      "sizes": "1500x1164",
       "type": "image/png"
     }
   ]
