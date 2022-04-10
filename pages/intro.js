@@ -1,4 +1,5 @@
-import Link from "next/link";
+import ButtonWithText from "../components/ButtonWithText";
+import arrow from "../public/arrow.png";
 
 export default function initialHelpscreen() {
   return (
@@ -14,10 +15,12 @@ export default function initialHelpscreen() {
         the emotional connection with your partner, so you can get talking again
         in a kind and compassionate way.
       </p>
-
-      <Link href='/userName' passHref>
-        <button>Create your own Olive Branch</button>
-      </Link>
+      <ButtonWithText
+        href='/userName'
+        text='Create your own Olive Branch'
+        img={arrow}
+        imgClassName={".Vector-7"}
+      />
     </div>
   );
 }

@@ -1,7 +1,8 @@
-import Link from "next/link";
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import GetFormData from "../components/Forms/GetFormData";
+import ButtonSymbol from "../components/ButtonSymbol";
+import arrow from "../public/arrow.png";
 
 export default function recipientNameScreen() {
   const { message } = useContext(MessageContext);
@@ -15,9 +16,11 @@ export default function recipientNameScreen() {
         inputId='recipient-name'
       />
       <p>{`${JSON.stringify(message)}`}</p>
-      <Link href='/uploadPhoto' passHref>
-        <button>{">>"}</button>
-      </Link>
+      <ButtonSymbol
+        href='/uploadPhoto'
+        img={arrow}
+        imgClassName={".Vector-7"}
+      />
     </div>
   );
 }

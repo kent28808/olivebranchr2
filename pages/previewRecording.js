@@ -1,4 +1,5 @@
-import Link from "next/link";
+import ButtonSymbol from "../components/ButtonSymbol";
+import arrow from "../public/arrow.png";
 
 export default function previewRecording() {
   return (
@@ -6,9 +7,11 @@ export default function previewRecording() {
       <h3>Sounds great!</h3>
       <br></br>
       <p>View img of audio recording here</p>
-      <Link href='/previewMessage' passHref>
-        <button>Next</button>
-      </Link>
+      <ButtonSymbol
+        href='/previewMessage'
+        img={arrow}
+        imgClassName={".Vector-7"}
+      />
     </div>
   );
 }

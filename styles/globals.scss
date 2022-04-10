@@ -13,45 +13,86 @@ $jet: #333;
 $xanadu: #7a8778;
 $gainsboro: #e1e1e1;
 
-h1 {
-  width: 314px;
-  height: 60px;
-  margin: 0 186px 385px 0;
-  font-family: $alegreya-regular;
-  font-size: 60px;
+// Mixins
+@mixin text-styling($font-color, $font, $font-size) {
+  font-family: $font;
+  font-size: $font-size;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1;
   letter-spacing: normal;
   text-align: left;
-  color: $redwood;
+  color: $font-color;
+}
+
+h1 {
+  @include text-styling($redwood, $alegreya-regular, 60px);
+  width: 314px;
+  height: 60px;
+  // margin: 0 186px 385px 0;
+  line-height: 1;
 }
 
 h3 {
+  @include text-styling($redwood, $alegreya-regular, 40px);
   width: 688.8px;
   height: 40px;
   margin: 5px 0 169px 5px;
-  font-family: $alegreya-regular;
-  font-size: 40px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.2;
-  letter-spacing: normal;
-  text-align: left;
-  color: $redwood;
 }
 
-p {
+p,
+.button-text {
+  @include text-styling($jet, $raleway-regular, 20px);
   width: 648px;
-  font-family: $raleway-regular;
-  font-size: 20px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
   line-height: 1.5;
-  letter-spacing: normal;
-  text-align: left;
-  color: #333;
 }
+
+.-splash {
+  width: 1440px;
+  height: 1024px;
+  flex-grow: 0;
+  padding: 196px 392px 120px;
+  background-color: #fff;
+}
+
+.white-bkg {
+  width: 656px;
+  height: 509px;
+  margin: 0 0 14px;
+  padding: 196px 392px 120px;
+  background-color: #fff;
+}
+
+img.OB-image {
+  width: 500px;
+  height: 388px;
+  margin: 57px 0 0;
+  object-fit: contain;
+}
+
+.button {
+  width: 583px; // diff
+  height: 67.4px; // diff
+  display: flex;
+  flex-direction: column; // send olive branch says row
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 14px 37px 99.6px 36px; // diff
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: solid 1px $xanadu;
+  background-color: #fff;
+}
+
+.Vector-7 {
+  width: 9.3px;
+  height: 18.7px;
+  transform: rotate(-90deg);
+  border: solid 2px $hunter-green;
+  margin: 2.7px 0 2.7px 20px;
+  padding: 1.7px 1.9px 1.7px 1.8px;
+}
+
+// Recording button has different styling

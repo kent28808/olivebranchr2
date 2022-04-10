@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
+import ButtonSymbol from "../components/ButtonSymbol";
+import arrow from "../public/arrow.png";
 
 export default function previewMessageScreen() {
   const { message } = useContext(MessageContext);
@@ -18,9 +19,11 @@ export default function previewMessageScreen() {
         {message.senderName}, who wants to reconnect with you. Tap the voice
         message below to listen!
       </p>
-      <Link href='/recipientNumber' passHref>
-        <button>Next</button>
-      </Link>
+      <ButtonSymbol
+        href='/recipientNumber'
+        img={arrow}
+        imgClassName={".Vector-7"}
+      />
     </div>
   );
 }

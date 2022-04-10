@@ -1,4 +1,6 @@
 import Link from "next/link";
+import ButtonWithText from "../components/ButtonWithText";
+import arrow from "../public/arrow.png";
 
 export default function uploadPhotoScreen() {
   return (
@@ -8,8 +10,14 @@ export default function uploadPhotoScreen() {
       <p>
         Pick a moment from your photos to remind both of you the happy days.
       </p>
-      <Link href='/previewPhoto' passHref>
-        <button>Next</button>
+      <ButtonWithText
+        href='/previewPhoto'
+        text='Upload photo'
+        img={arrow}
+        imgClassName={".Vector-7"}
+      />
+      <Link href='/recordMessage' passHref>
+        <p>Skip</p>
       </Link>
     </div>
   );

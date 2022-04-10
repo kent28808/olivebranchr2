@@ -15,7 +15,7 @@ export default function handler(req, res) {
 
   // client.messages
   //   .create({
-  //     body: `Hey ${req.body.recipientName}, you just recieved an Olive Branch from ${req.body.senderName}, who wants to reconnect with you. Tap the voice message below to listen!`,
+  //     body: `Hey ${req.body.recipientName}, you just recieved an Olive Branch from ${req.body.senderName}, who wants to reconnect with you. Tap the voice message below to listen! Go to https://www.twilio.com/`,
   //     to: `+1${req.body.recipientNumber}`, // Text this number
   //     from: twilioAccountNumber, // From a valid Twilio number
   //   })
