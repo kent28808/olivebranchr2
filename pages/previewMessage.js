@@ -19,11 +19,7 @@ export default function previewMessageScreen() {
         {message.senderName}, who wants to reconnect with you. Tap the voice
         message below to listen!
       </p>
-      <ButtonSymbol
-        href='/recipientNumber'
-        img={arrow}
-        imgClassName={".Vector-7"}
-      />
+      <ButtonSymbol innerRef='/recipientNumber' />
     </div>
   );
 }

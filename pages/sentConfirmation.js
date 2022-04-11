@@ -24,7 +24,7 @@ export default function sentConfirmationScreen() {
         alt='olive branch logo'
       />
       <ButtonWithText
-        href='/'
+        innerRef='/'
         text='Return to home'
         img={arrow}
         imgClassName={".Vector-7"}

@@ -7,11 +7,7 @@ export default function previewPhoto() {
       <h3>Looks great!</h3>
       <br></br>
       <p>Preview photo here</p>
-      <ButtonSymbol
-        href='/recordMessage'
-        img={arrow}
-        imgClassName={".Vector-7"}
-      />
+      <ButtonSymbol innerRef='/recordMessage' />
     </div>
   );
 }

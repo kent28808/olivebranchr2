@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@uppy/core": "^2.1.8",
+    "@uppy/react": "^2.1.2",
+    "@uppy/tus": "^2.2.2",
     "dotenv": "^16.0.0",
     "mic-recorder-to-mp3": "^2.2.2",
     "next": "12.1.1",

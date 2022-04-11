@@ -19,7 +19,7 @@ export default function recipientPhoneScreen() {
       <p>Please enter your 10 digit phone number (no dashes)</p>
       {/* US numbers only right now */}
       <p>{`${JSON.stringify(message)}`}</p>
-      <ButtonSymbol href='/sentConfirmation' />
+      <ButtonSymbol innerRef='/sentConfirmation' />
     </div>
   );
 }

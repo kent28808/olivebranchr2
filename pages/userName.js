@@ -12,7 +12,7 @@ export default function userNameScreen() {
       <h3>What's your name?</h3>
       <GetFormData dataType='text' msgKey='senderName' inputId='sender-name' />
       <p>{`${JSON.stringify(message)}`}</p>
-      <ButtonSymbol href='/recipientName' />
+      <ButtonSymbol innerRef='/recipientName' />
     </div>
   );
 }

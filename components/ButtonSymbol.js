@@ -5,9 +5,11 @@ import arrow from "../public/arrow.png";
 export default function NextButton(props) {
   return (
     <div className='button-next'>
-      <Link href={props.href} passHref>
+      <Link href={props.innerRef} passHref>
         {/* <p>Next</p> */}
-        <Image src={arrow} alt='arrow icon' />
+        <a>
+          <Image src={arrow} alt='arrow icon' />
+        </a>
       </Link>
     </div>
   );

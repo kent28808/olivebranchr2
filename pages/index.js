@@ -16,7 +16,7 @@ export default function Home() {
         alt='olive branch logo'
       />
       <ButtonWithText
-        href='/intro'
+        innerRef='/intro'
         text='Reconnect with your partner after a fight'
         img={arrow}
         imgClassName={".Vector-7"}

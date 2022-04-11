@@ -1,9 +1,25 @@
-import React, { useState, useEffect } from 'react';
 import Link from "next/link";
+import { useContext } from "react";
+import { MessageContext } from "../context/MessageContext";
+import Uppy from "@uppy/core";
+import Tus from "@uppy/tus";
+import { Dashboard } from "@uppy/react";
 import ButtonWithText from "../components/ButtonWithText";
 import arrow from "../public/arrow.png";
+import "@uppy/core/dist/style.css";
+import "@uppy/dashboard/dist/style.css";
 
 export default function uploadPhotoScreen() {
+  const { message, setMessageValues } = useContext(MessageContext);
+  const uppy = new Uppy().use(Tus, {
+    endpoint: "https://tusd.tusdemo.net/files/",
+  });
+
+  uppy.on("complete", (result) => {
+    let uploadURL = result.successful[0].response.uploadURL;
+    setMessageValues("imgURL", uploadURL);
+  });
+
   return (
     <div className='container'>
       <h3>Next, let's make sure your partner can see you.</h3>
@@ -11,56 +27,20 @@ export default function uploadPhotoScreen() {
       <p>
         Pick a moment from your photos to remind both of you the happy days.
       </p>
+      <Dashboard uppy={uppy} />
       <ButtonWithText
-        href='/previewPhoto'
+        innerRef='/previewPhoto'
         text='Upload photo'
         img={arrow}
         imgClassName={".Vector-7"}
       />
+      <p>{`${JSON.stringify(message)}`}</p>
       <Link href='/recordMessage' passHref>
         <p>Skip</p>
       </Link>
     </div>
   );
 }
-import Head from 'next/head'
-import Uppy from '@uppy/core'
-import Tus from '@uppy/tus'
-import Statusbar from '@uppy/status-bar'
-import { Dashboard } from '@uppy/react'
-import '@uppy/core/dist/style.css'
-import '@uppy/dashboard/dist/style.css'
-
-
-
-export default function Home() {
-  const [url, setUrl] = useState('');
-  const uppy = new Uppy()
-	.use(Tus, {
-		endpoint: 'https://tusd.tusdemo.net/files/'
-	});
-  console.log('Tus', Tus);
-
-uppy.on('complete', (result) => {
-  setUrl(result.successful[0].response.uploadURL)
-	// console.log('Upload complete!', result.successful)
-  console.log('result', result)
-  // handler(req, res)
-}) 
-console.log(url)
-  return (
-    <div className="container">
-			<Dashboard
-				uppy={uppy}
-			/>	
-      <Link href='/previewPhoto' passHref>
-        <button>Next</button>
-      </Link>
-  	</div>
-	)
-}
-
-
 
 // Uppy Config
 // const uppy = new Uppy({
@@ -85,23 +65,3 @@ console.log(url)
 //   logger: justErrorsLogger,
 //   infoTimeout: 5000,
 // })
-
-
-
-
-// const uploadPhotoScreen = () => {
-//   return (
-//     <div>
-//       <h1>Next, let's make sure your partner can see you.</h1>
-//       <br></br>
-//       <p>
-//         Pick a moment from your photos to remind both of you the happy days.
-//       </p>
-//       <Link href='/previewPhoto' passHref>
-//         <button>Next</button>
-//       </Link>
-//     </div>
-//   );
-// };
-
-// export default uploadPhotoScreen;

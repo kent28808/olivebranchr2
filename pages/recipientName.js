@@ -16,11 +16,7 @@ export default function recipientNameScreen() {
         inputId='recipient-name'
       />
       <p>{`${JSON.stringify(message)}`}</p>
-      <ButtonSymbol
-        href='/uploadPhoto'
-        img={arrow}
-        imgClassName={".Vector-7"}
-      />
+      <ButtonSymbol innerRef='/uploadPhoto' />
     </div>
   );
 }
