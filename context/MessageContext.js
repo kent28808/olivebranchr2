@@ -3,6 +3,7 @@ import React, { createContext, useState, useEffect } from "react";
 export const MessageContext = createContext("Hello");
 
 export default function MessageProvider(props) {
+  // const [url,setUrl]= useState('')
   const [message, setMessage] = useState({
     senderName: "",
     recipientName: "",
