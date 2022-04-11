@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import ButtonSymbol from "../components/ButtonSymbol";
-import arrow from "../public/arrow.png";
 
 export default function previewMessageScreen() {
   const { message } = useContext(MessageContext);

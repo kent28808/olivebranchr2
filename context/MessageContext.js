@@ -32,6 +32,7 @@ export default function MessageProvider(props) {
           recipientNumber: message.recipientNumber,
           recipientName: message.recipientName,
           senderName: message.senderName,
+          imgURL: message.imgURL,
         }),
         headers: {
           "Content-Type": "application/json",

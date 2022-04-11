@@ -12,7 +12,7 @@ export default function Home() {
       <Image
         src={oliveBranch}
         srcSet={`${oliveBranch2x} 2x, ${oliveBranch3x} 3x`}
-        class='OB-image'
+        className='OB-image'
         alt='olive branch logo'
       />
       <ButtonWithText
