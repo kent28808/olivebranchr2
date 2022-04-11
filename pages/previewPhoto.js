@@ -3,7 +3,7 @@ import arrow from "../public/arrow.png";
 
 export default function previewPhoto() {
   return (
-    <div>
+    <div className='container'>
       <h3>Looks great!</h3>
       <br></br>
       <p>Preview photo here</p>

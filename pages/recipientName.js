@@ -8,7 +8,7 @@ export default function recipientNameScreen() {
   const { message } = useContext(MessageContext);
 
   return (
-    <div>
+    <div className='container'>
       <h3>Hey {message.senderName}, who are you reaching out to?</h3>
       <GetFormData
         dataType='text'

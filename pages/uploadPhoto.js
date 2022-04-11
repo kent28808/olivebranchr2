@@ -4,7 +4,7 @@ import arrow from "../public/arrow.png";
 
 export default function uploadPhotoScreen() {
   return (
-    <div>
+    <div className='container'>
       <h3>Next, let's make sure your partner can see you.</h3>
       <br></br>
       <p>

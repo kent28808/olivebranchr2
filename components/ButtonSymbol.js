@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import arrow from "../public/arrow.png";
 
-export default function ButtonWithSymbol(props) {
+export default function NextButton(props) {
   return (
-    <div className='button'>
+    <div className='button-next'>
       <Link href={props.href} passHref>
-        <span className='button-text'>
-          <Image src={props.img} className={props.imgClassName} />
-        </span>
+        {/* <p>Next</p> */}
+        <Image src={arrow} alt='arrow icon' />
       </Link>
     </div>
   );

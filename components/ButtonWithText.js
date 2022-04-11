@@ -7,7 +7,7 @@ export default function ButtonWithText(props) {
       <Link href={props.href} passHref>
         <span className='button-text'>
           {props.text}
-          <Image src={props.img} className={props.imgClassName} />
+          <Image src={props.img} alt='arrow icon' className='Vector-7' />
         </span>
       </Link>
     </div>

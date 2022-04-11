@@ -7,7 +7,7 @@ export default function previewMessageScreen() {
   const { message } = useContext(MessageContext);
 
   return (
-    <div>
+    <div className='container'>
       <h3>Thanks for sharing!</h3>
       <p>
         Here's a preview of the Olive Branch that we created for you to

@@ -3,7 +3,7 @@ import arrow from "../public/arrow.png";
 
 export default function initialHelpscreen() {
   return (
-    <div>
+    <div className='container'>
       <h3>Recovering a fight with loved ones it's stressful.</h3>
       <p>
         It's even harder to reach out and start reconciliation process in such
