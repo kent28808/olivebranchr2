@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
 import Head from 'next/head'
 import Uppy from '@uppy/core'
@@ -6,19 +7,65 @@ import Statusbar from '@uppy/status-bar'
 import { Dashboard } from '@uppy/react'
 import '@uppy/core/dist/style.css'
 import '@uppy/dashboard/dist/style.css'
+import handler from './api/sendMMS';
 
 
-const uppy = new Uppy()
-	.use(Tus, {
-		endpoint: 'https://tusd.tusdemo.net/files/'
-	});
 
-uppy.on('complete', (result) => {
-	console.log('Upload complete!', result.successful)
-})
+
+// const Search = () => {
+//   // useState hooks for url
+//   const [url, setUrl] = useState('');
+
+
+  // // equivalent to componentDidMount, fires once when component mounts
+  // useEffect(() => {
+  //   // get all the URLParams
+  //   const params = new URLSearchParams(location.search);
+  //   // get the q param
+  //   const q = params.get('q');
+  //   // set language in state to the q parameter
+  //   setUrl(q ? q : '');
+  //   //eslint-disable-next-line
+  // }, []);
+  // console.log(url)
+
+  // // function for handling form submit
+  // const submitAction = (e) => {
+  //   // prevents default, so page won't reload on form submit
+  //   e.preventDefault();
+  //   // set language in state
+  //   setUrl(input);
+  //   // add query string to URL
+  //  .push('' + input);
+  //   // clear the input
+  //   setUrl('');
+  // };
+
+  // const transformRoomData = (response, room, space) => {
+  //   // console.log('transform',response, room);
+  //   let roomData = {
+  //     roomId: roomId,
+  //     roomName: room,
+  //     space: space,
+  //     sensorData: [],
+  //   };
 
 
 export default function Home() {
+  const [url, setUrl] = useState('');
+  const uppy = new Uppy()
+	.use(Tus, {
+		endpoint: 'https://tusd.tusdemo.net/files/'
+	});
+  console.log('Tus', Tus);
+
+uppy.on('complete', (result) => {
+  setUrl(result.successful[0].response.uploadURL)
+	// console.log('Upload complete!', result.successful)
+  console.log('result', result)
+  // handler(req, res)
+}) 
+console.log(url)
   return (
     <div className="container">
 			<Dashboard
