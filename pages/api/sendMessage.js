@@ -10,14 +10,16 @@ export default function handler(req, res) {
   // res
   //   .status(200)
   //   .json({ message: "Placeholder til we get the rest of the app working" });
+
   res.statusCode = 200;
   res.setHeader("Content-Type", "application/json");
 
   client.messages
     .create({
-      body: `Hey ${req.body.recipientName}, you just recieved an Olive Branch from ${req.body.senderName}, who wants to reconnect with you. Tap the voice message below to listen!`,
+      body: `Hey ${req.body.recipientName}, you just recieved an Olive Branch from ${req.body.senderName}, who wants to reconnect with you. Tap the voice message below to listen! Go to https://www.twilio.com/`,
       to: `+1${req.body.recipientNumber}`, // Text this number
       from: twilioAccountNumber, // From a valid Twilio number
+      mediaUrl: [`${req.body.imgURL}`],
     })
-    .then((message) => console.log(message.sid));
+    .then((message) => console.log("This is message.sid:", message.sid));
 }

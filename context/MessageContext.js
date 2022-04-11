@@ -8,6 +8,7 @@ export default function MessageProvider(props) {
     recipientName: "",
     message: "",
     recipientNumber: 0,
+    imgURL: "",
   });
 
   const setMessageValues = (key, value) => {
@@ -31,6 +32,7 @@ export default function MessageProvider(props) {
           recipientNumber: message.recipientNumber,
           recipientName: message.recipientName,
           senderName: message.senderName,
+          imgURL: message.imgURL,
         }),
         headers: {
           "Content-Type": "application/json",

@@ -1,15 +1,26 @@
-import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
+import ButtonWithText from "../components/ButtonWithText";
+import oliveBranch from "../public/index/ob-image.png";
+import oliveBranch2x from "../public/index/ob-image@2x.png";
+import oliveBranch3x from "../public/index/ob-image@3x.png";
+import arrow from "../public/arrow.png";
 
 export default function Home() {
   return (
-    <div>
+    <div className='container'>
       <h1>Olive Branch</h1>
-      <Link href='/intro' passHref>
-        <p>Reconnect with your partner after a fight</p>
-      </Link>
+      <Image
+        src={oliveBranch}
+        srcSet={`${oliveBranch2x} 2x, ${oliveBranch3x} 3x`}
+        className='OB-image'
+        alt='olive branch logo'
+      />
+      <ButtonWithText
+        innerRef='/intro'
+        text='Reconnect with your partner after a fight'
+        img={arrow}
+        imgClassName={".Vector-7"}
+      />
     </div>
   );
 }

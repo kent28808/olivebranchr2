@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Raleway:wght@400;500&display=swap");
+
+// Fonts
+$alegreya-regular: "Alegreya", serif;
+$raleway-regular: "Raleway", sans-serif;
+
+// Primary Colors
+$redwood: #8f5949;
+$hunter-green: #31542c;
+$jet: #333;
+
+// Secondary Colors
+$xanadu: #7a8778;
+$gainsboro: #e1e1e1;
+
+// All Pages
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  padding: 1rem;
+  margin: auto auto;
+}
+
+// Text
+@mixin text-styling($font-color, $font, $font-size) {
+  font-family: $font;
+  font-size: $font-size;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $font-color;
+}
+
+h1 {
+  @include text-styling($redwood, $alegreya-regular, 60px);
+  // width: 314px; // Width is making text stop at an arbitrary spot
+  // height: 60px;
+  // margin: 0 186px 385px 0;
+  line-height: 1;
+}
+
+h3 {
+  @include text-styling($redwood, $alegreya-regular, 40px);
+  // width: 688.8px;
+  // height: 40px;
+  // margin: 5px 0 169px 5px;
+  line-height: 1.2;
+}
+
+p,
+.button-text {
+  @include text-styling($jet, $raleway-regular, 20px);
+  // width: 648px;
+  line-height: 1.5;
+}
+
+// Buttons
+@mixin button-styling {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: solid 1px $xanadu;
+  background-color: #fff;
+}
+
+.button {
+  @include button-styling;
+  // width: 583px; // diff
+  // height: 67.4px; // diff
+  // margin: 14px 37px 99.6px 36px; // diff
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: solid 1px $xanadu;
+}
+
+.button-next {
+  @include button-styling;
+  // width: 93px;
+  // height: 63px;
+  padding: 20px 40px;
+  // display: inline-block;
+  // margin: 162px 281.1px 0 114px; // diff
+}
+
+.Vector-7 > span {
+  // width: 9.3px;
+  // height: 18.7px;
+  // transform: rotate(-90deg);
+  // border: solid 2px $hunter-green;
+  // margin: 2.7px 0 2.7px 20px;
+  padding: 1.7px 1.9px 1.7px 1.8px;
+}
+
+// Recording button has different styling

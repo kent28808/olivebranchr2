@@ -1,13 +1,13 @@
-import Link from "next/link";
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
+import ButtonSymbol from "../components/ButtonSymbol";
 
 export default function previewMessageScreen() {
   const { message } = useContext(MessageContext);
 
   return (
-    <div>
-      <h1>Thanks for sharing!</h1>
+    <div className='container'>
+      <h3>Thanks for sharing!</h3>
       <p>
         Here's a preview of the Olive Branch that we created for you to
         {message.recipientName}
@@ -18,9 +18,7 @@ export default function previewMessageScreen() {
         {message.senderName}, who wants to reconnect with you. Tap the voice
         message below to listen!
       </p>
-      <Link href='/recipientNumber' passHref>
-        <button>Next</button>
-      </Link>
+      <ButtonSymbol innerRef='/recipientNumber' />
     </div>
   );
 }

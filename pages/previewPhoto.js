@@ -1,16 +1,13 @@
-import Link from "next/link";
+import ButtonSymbol from "../components/ButtonSymbol";
+import arrow from "../public/arrow.png";
 
-const previewPhoto = () => {
+export default function previewPhoto() {
   return (
-    <div>
-      <h1>Looks great!</h1>
+    <div className='container'>
+      <h3>Looks great!</h3>
       <br></br>
       <p>Preview photo here</p>
-      <Link href='/recordMessage' passHref>
-        <button>Next</button>
-      </Link>
+      <ButtonSymbol innerRef='/recordMessage' />
     </div>
   );
-};
-
-export default previewPhoto;
+}
