@@ -1,4 +1,3 @@
-
 const withPWA = require("next-pwa");
 
 module.exports = withPWA({
@@ -7,5 +6,8 @@ module.exports = withPWA({
     dest: "public",
     register: true,
     skipWaiting: true,
+  },
+  images: {
+    domains: ["tusd.tusdemo.net"],
   },
 });

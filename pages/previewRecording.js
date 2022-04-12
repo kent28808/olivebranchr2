@@ -1,5 +1,4 @@
 import ButtonSymbol from "../components/ButtonSymbol";
-import arrow from "../public/arrow.png";
 
 export default function previewRecording() {
   return (

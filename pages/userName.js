@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext"; // Wrap in {} b/c exported context w/o keyword default
 import GetFormData from "../components/Forms/GetFormData";
 import ButtonSymbol from "../components/ButtonSymbol";
-import arrow from "../public/arrow.png";
 
 export default function userNameScreen() {
   const { message } = useContext(MessageContext);
