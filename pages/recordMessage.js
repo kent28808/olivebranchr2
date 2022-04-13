@@ -1,82 +1,98 @@
-import Link from "next/link";
-import React from "react";
+import { useContext, useState, useEffect } from "react";
+import { MessageContext } from "../context/MessageContext";
+import ButtonSymbol from "../components/ButtonSymbol";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isRecording: false,
-      blobURL: "",
-      isBlocked: false,
-    };
-  }
-  //   Start recording
-  start = () => {
-    if (this.state.isBlocked) {
+export default function recordMessage() {
+  const { message, setMessageValues } = useContext(MessageContext);
+  const [isRecording, setIsRecording] = useState(false);
+  const [isBlocked, setisBlocked] = useState(false);
+
+  function startRecording() {
+    if (isBlocked) {
       console.log("Permission Denied");
     } else {
       Mp3Recorder.start()
         .then(() => {
-          this.setState({ isRecording: true });
+          setIsRecording(true);
         })
-        .catch((e) => console.error(e));
+        .catch((e) => console.error("Error starting recording: ", e));
     }
-  };
-  //   Stop recording
-  stop = () => {
+  }
+
+  function stopRecording() {
     Mp3Recorder.stop()
       .getMp3()
       .then(([buffer, blob]) => {
-        const blobURL = URL.createObjectURL(blob); //blob is the captured mp3 audio
-        this.setState({ blobURL, isRecording: false });
-        console.log(blobURL)
+        // Set date to timestamp the file name
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1; // Zero indexed
+        const day = date.getDate(); // Returns day of the week
+
+        // Create audio file and save in messageContext
+        const file = new File(
+          buffer,
+          `${year}.${month}.${day}.${message.senderName}Recording.mp3`,
+          {
+            type: blob.type,
+            lastModified: Date.now(),
+          }
+        );
+        setMessageValues("audioFile", file); // Not updating state with file data, address later
+
+        // Create a blobURL and save in messageContext to playback audio
+        const blobURL = URL.createObjectURL(blob); // A blob is the captured mp3 audio
+        setMessageValues("blobURL", blobURL);
+        setIsRecording(false);
       })
-      .catch((e) => console.log(e));
-  };
-  //   Using a promise based getUserMedia() https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
-  componentDidMount() {
+      .catch((e) => console.log("Error stopping recording: ", e));
+  }
+
+  useEffect(() => {
+    // Using a promise based getUserMedia() https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
     navigator.getUserMedia(
-      { audio: true }, // Asking web browser for microphone permission
+      { audio: true }, // Ask web browser for permission to use mic
       () => {
         console.log("Accepted");
-        this.setState({ isBlocked: false });
+        setisBlocked(false);
       },
       () => {
         console.log("Rejected");
-        this.setState({ isBlocked: true });
+        setisBlocked(true);
       }
     );
-  }
-  //   Display buttons and playback controls
-  render() {
-    return (
-      <div className='App'>
-        <h3>First, let's make sure Jen can HEAR your commitment.</h3>
-        <p>Record below Commitment Declaration as a voice message for Jen.</p>
-        <br></br>
-        <p> Hey Jen,</p>
-        <p>
-          I want you to know that you are very important to me. I am committed
-          to this relationship and I promise that we will this out together.
-        </p>
-        <header className='App-header'>
-          <button onClick={this.start} disabled={this.state.isRecording}>
-            Record
-          </button>
-          <button onClick={this.stop} disabled={!this.state.isRecording}>
-            Stop
-          </button>
-          <audio src={this.state.blobURL} controls='controls' />
-        </header>
-        <Link href='/previewRecording' passHref>
-          <button>Next</button>
-        </Link>
-      </div>
-    );
-  }
-}
+  }, [isBlocked]);
 
-export default App;
+  return (
+    <div className='container'>
+      <h3>
+        First, let's make sure {message.recipientName} can HEAR your commitment.
+      </h3>
+      <p>
+        Record below Commitment Declaration as a voice message for{" "}
+        {message.recipientName}.
+      </p>
+      <br></br>
+      <p>
+        {" "}
+        Hey {message.recipientName}, I want you to know that you are very
+        important to me. I am committed to this relationship and I promise that
+        we will this out together.
+      </p>
+      <header>
+        <button onClick={(e) => startRecording(e)} disabled={isRecording}>
+          Record
+        </button>
+        <button onClick={(e) => stopRecording(e)} disabled={!isRecording}>
+          Stop
+        </button>
+        <audio src={message.blobURL} controls='controls' />
+      </header>
+      <p>{`${JSON.stringify(message)}`}</p>
+      <ButtonSymbol innerRef='/uploadPhoto' />
+    </div>
+  );
+}

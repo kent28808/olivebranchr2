@@ -9,6 +9,8 @@ export default function MessageProvider(props) {
     message: "",
     recipientNumber: 0,
     imgURL: "",
+    blobURL: "",
+    audioFile: {},
   });
 
   const setMessageValues = (key, value) => {
