@@ -68,14 +68,12 @@ export default function recordMessage() {
 
   return (
     <div className='container'>
-      <h3>
-        First, let's make sure {message.recipientName} can HEAR your commitment.
-      </h3>
+      <h3>Next, let {message.recipientName} hear you.</h3>
       <p>
-        Record below Commitment Declaration as a voice message for{" "}
-        {message.recipientName}.
+        Record an empathetic commitment statement as a voice message. Not sure
+        what to say? We've got one ready for you.
       </p>
-      <br></br>
+      <b />
       <p>
         {" "}
         Hey {message.recipientName}, I want you to know that you are very
@@ -89,10 +87,9 @@ export default function recordMessage() {
         <button onClick={(e) => stopRecording(e)} disabled={!isRecording}>
           Stop
         </button>
-        <audio src={message.blobURL} controls='controls' />
       </header>
       <p>{`${JSON.stringify(message)}`}</p>
-      <ButtonSymbol innerRef='/uploadPhoto' />
+      <ButtonSymbol innerRef='/previewRecording' />
     </div>
   );
 }
