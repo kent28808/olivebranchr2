@@ -16,7 +16,7 @@ export default function initialHelpscreen() {
         in a kind and compassionate way.
       </p>
       <ButtonWithText
-        innerRef='/userName'
+        innerRef='/typeOfUser'
         text='Create your own Olive Branch'
         img={arrow}
         imgClassName={".Vector-7"}

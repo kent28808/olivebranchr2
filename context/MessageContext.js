@@ -6,12 +6,13 @@ export default function MessageProvider(props) {
   const [message, setMessage] = useState({
     senderName: "",
     recipientName: "",
-    message: "",
     recipientNumber: 0,
     imgURL: "",
     blobURL: "",
     audioFile: {},
   });
+
+  const [ob, setOb] = useState({});
 
   const setMessageValues = (key, value) => {
     setMessage({
@@ -20,14 +21,39 @@ export default function MessageProvider(props) {
     });
   };
 
+  const setObValues = (values) => {
+    setOb((prevValues) => ({
+      ...prevValues,
+      ...values,
+    }));
+  };
+
   useEffect(() => {
-    // Check to make sure fields aren't blank
+    console.log("Helo");
+    // If fields are blank, don't send message
     if (
       message.senderName === "" ||
       message.recipientName === "" ||
-      message.recipientNumber === 0
+      message.recipientNumber === 0 ||
+      message.blobURL === ""
     )
       return;
+    const verifyCode = Math.random().toString(36).substring(2); // Remove "0"
+    (async function uploadMsgData() {
+      const res = await fetch("/api/oliveBranch", {
+        method: "POST",
+        body: JSON.stringify({
+          recipientNumber: message.recipientNumber,
+          recipientName: message.recipientName,
+          senderName: message.senderName,
+          imgURL: message.imgURL,
+          blobURL: message.blobURL,
+          verifyCode: verifyCode,
+        }),
+      });
+      const result = await res.json();
+      console.log(result);
+    })(); // Immediately call the function after checking message obj
     (async function sendMessage() {
       const res = await fetch("/api/sendMessage", {
         body: JSON.stringify({
@@ -35,6 +61,7 @@ export default function MessageProvider(props) {
           recipientName: message.recipientName,
           senderName: message.senderName,
           imgURL: message.imgURL,
+          verifyCode: message.verifyCode,
         }),
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +75,9 @@ export default function MessageProvider(props) {
   }, [message.recipientNumber]); // Only re-run effect if recipientNumber changes
 
   return (
-    <MessageContext.Provider value={{ message, setMessageValues }}>
+    <MessageContext.Provider
+      value={{ message, setMessageValues, ob, setObValues }}
+    >
       {props.children}
     </MessageContext.Provider>
   );
