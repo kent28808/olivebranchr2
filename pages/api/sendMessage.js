@@ -5,6 +5,9 @@ const twilioAccountNumber = process.env.TWILIO_ACCOUNT_NUMBER;
 const twilio = require("twilio");
 const client = new twilio(accountSid, authToken);
 
+console.log(twilio)
+// console.log(accountSid, authToken)
+
 export default function handler(req, res) {
   console.log(req.body);
   // res
