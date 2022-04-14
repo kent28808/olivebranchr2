@@ -7,8 +7,11 @@ export default function ButtonWithText(props) {
       <Link href={props.innerRef} passHref>
         <span className='button-text'>
           {props.text}
-          <Image src={props.img} alt='arrow icon' className='Vector-7' />
+          <span>
+          <Image src={props.img} alt='arrow icon'/>
+          </span>
         </span>
+        
       </Link>
     </div>
   );

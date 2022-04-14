@@ -10,11 +10,13 @@ export default function userNameScreen() {
 
   return (
     <div className='container'>
+      <div className='progressbranch'>
       <Image
         src={progressBar1}
         className='OB-image'
         alt='progress bar1 logo'
       />
+      </div>
       <h3>What's your name?</h3>
       <GetFormData dataType='text' msgKey='senderName' inputId='sender-name' />
       <p>{`${JSON.stringify(message)}`}</p>

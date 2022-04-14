@@ -18,7 +18,7 @@ export default function Home() {
       />
       <ButtonWithText
         innerRef='/intro'
-        text='Reconnect with your partner after a fight'
+        text='Mending hearts with your partner'
         img={arrow}
         imgClassName={".Vector-7"}
       />

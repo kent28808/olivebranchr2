@@ -44,19 +44,6 @@ h1 {
   margin-top: 200px;
   line-height: 1;
 }
-// h2 {
-//   width: 224px;
-//   height: 45px;
-//   font-family: Raleway;
-//   font-size: 30px;
-//   font-weight: 500;
-//   font-stretch: normal;
-//   font-style: normal;
-//   line-height: 1.5;
-//   letter-spacing: normal;
-//   text-align: left;
-//   color: #333;
-// }
 
 h3 {
   @include text-styling($redwood, $alegreya-regular, 40px);
@@ -71,7 +58,14 @@ p,
   @include text-styling($jet, $raleway-regular, 20px);
   // width: 648px;
   line-height: 1.5;
-  
+  display: flex;
+  justify-content: center;
+}
+
+.button-text > span {
+  margin-left: 22px;
+  display: flex;
+  padding: 4px 0px;
 }
 
 // Buttons
@@ -89,7 +83,7 @@ p,
 
 .button {
   @include button-styling;
-  width: 500px; // diff
+  width: 503px; // diff
   // height: 67.4px; // diff
   // margin: 14px 37px 99.6px 36px; // diff
   margin-top: 80px;
@@ -107,13 +101,21 @@ p,
   // margin: 162px 281.1px 0 114px; // diff
 }
 
-.Vector-7 > span {
+.Vector-7 {
   // width: 9.3px;
   // height: 18.7px;
   // transform: rotate(-90deg);
   // border: solid 2px $hunter-green;
   // margin: 2.7px 0 2.7px 20px;
   padding: 1.7px 1.9px 1.7px 1.8px;
+  display:block;
 }
 
+.progressbranch {
+  width: 160px;
+  height: 132px;
+  margin-top: 63px;
+  margin-left: 400px;
+  margin-right: 880px
+}
 // Recording button has different styling

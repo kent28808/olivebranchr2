@@ -2,6 +2,9 @@ import { useContext, useState, useEffect } from "react";
 import { MessageContext } from "../context/MessageContext";
 import ButtonSymbol from "../components/ButtonSymbol";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
+import Image from "next/image";
+import progressBar4 from "../public/progress/progressbar_step4.png"
+
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
@@ -68,6 +71,13 @@ export default function recordMessage() {
 
   return (
     <div className='container'>
+        <div className='progressbranch'>
+      <Image
+        src={progressBar4}
+        className='OB-image'
+        alt='progress bar4 logo'
+      />
+      </div>
       <h3>Next, let {message.recipientName} hear you.</h3>
       <p>
         Record an empathetic commitment statement as a voice message. Not sure

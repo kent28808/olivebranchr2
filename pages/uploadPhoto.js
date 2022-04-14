@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import Uppy from "@uppy/core";
@@ -6,6 +7,7 @@ import Tus from "@uppy/tus";
 import { Dashboard } from "@uppy/react";
 import ButtonWithText from "../components/ButtonWithText";
 import arrow from "../public/arrow.png";
+import progressBar3 from "../public/progress/progressbar_step3.png"
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
 
@@ -22,6 +24,13 @@ export default function uploadPhotoScreen() {
 
   return (
     <div className='container'>
+      <div className='progressbranch'>
+      <Image
+        src={progressBar3}
+        className='OB-image'
+        alt='progress bar3 logo'
+      />
+      </div>
       <h3>Next, let's make sure your partner can see you.</h3>
       <br></br>
       <p>
