@@ -51,23 +51,29 @@ h3 {
   // height: 40px;
   // margin: 5px 0 169px 5px;
   margin-top: 200px;
+  margin-bottom: 4px;
   width: 701px;
   line-height: 1.2;
 }
 
-p,
+.h3intro {
+  margin-top: -160px;
+  font-size: 100px
+}
+
 .creators {
   @include text-styling($jet, $raleway-regular, 18px);
   align-items: center;
   margin-top: 40px;
 }
-.paragraph-text {
+
+.body-text {
   @include text-styling($jet, $raleway-regular, 20px);
-  margin-left: 134px;
+  margin-left: 400px;
   margin-right: 400px;
   width: 701px;
-  align-content: center
-    }
+  align-content: center;
+}
 
 .button-text {
   @include text-styling($jet, $raleway-regular, 25px);

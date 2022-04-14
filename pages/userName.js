@@ -19,7 +19,7 @@ export default function userNameScreen() {
       </div>
       <h3>What's your name?</h3>
       <GetFormData dataType='text' msgKey='senderName' inputId='sender-name' />
-      <p>{`${JSON.stringify(message)}`}</p>
+      {/* <p>{`${JSON.stringify(message)}`}</p> */}
       <ButtonSymbol innerRef='/recipientName' />
     </div>
   );
