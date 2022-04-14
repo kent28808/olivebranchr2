@@ -50,14 +50,29 @@ h3 {
   // width: 688.8px;
   // height: 40px;
   // margin: 5px 0 169px 5px;
+  margin-top: 200px;
+  width: 701px;
   line-height: 1.2;
 }
 
 p,
-.button-text {
+.creators {
+  @include text-styling($jet, $raleway-regular, 18px);
+  align-items: center;
+  margin-top: 40px;
+}
+.paragraph-text {
   @include text-styling($jet, $raleway-regular, 20px);
+  margin-left: 134px;
+  margin-right: 400px;
+  width: 701px;
+  align-content: center
+    }
+
+.button-text {
+  @include text-styling($jet, $raleway-regular, 25px);
   // width: 648px;
-  line-height: 1.5;
+  // line-height: 1.5;
   display: flex;
   justify-content: center;
 }
@@ -66,6 +81,7 @@ p,
   margin-left: 22px;
   display: flex;
   padding: 4px 0px;
+
 }
 
 // Buttons
