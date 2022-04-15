@@ -23,11 +23,16 @@ export default function Verifyolivebranch({ oliveBranches }) {
 
   return (
     <div className='container'>
+<<<<<<< HEAD
       <p>{`${JSON.stringify(ob)}`}</p>
       <form onSubmit={(e) => Validaterecipient(e)}>
+=======
+      {/* <p className='body'>{`${JSON.stringify(ob)}`}</p> */}
+      <form onSubmit={(e) => validateRecipient(e)}>
+>>>>>>> f7dc97745700022d2b7e5acf63361437ad9b944b
         <input type='text' name='senderNumber' id='verifyPhone' required />
         <input type='text' name='verifyCode' id='verifyCode' required />
-        <button className={"button button-text"} type='submit'>
+        <button className='button-text' type='submit'>
           Validate
         </button>
       </form>

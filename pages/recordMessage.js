@@ -3,8 +3,9 @@ import { MessageContext } from "../context/MessageContext";
 import ButtonSymbol from "../components/ButtonSymbol";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 import Image from "next/image";
-import progressBar4 from "../public/progress/progressbar_step4.png"
-
+import progressBar4 from "../public/progress/progressbar_step4.png";
+import buttonRecording from "../public/button_recording.svg";
+import buttonStop from "../public/button_stop_recording.svg";
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
@@ -71,34 +72,46 @@ export default function Recordmessage() {
 
   return (
     <div className='container'>
-        <div className='progressbranch'>
-      <Image
-        src={progressBar4}
-        className='OB-image'
-        alt='progress bar4 logo'
-      />
+      <div className='progressbranch'>
+        <Image
+          src={progressBar4}
+          className='OB-image'
+          alt='progress bar4 logo'
+        />
       </div>
-      <h3>Next, let {message.recipientName} hear you.</h3>
-      <p>
+      <h2 className='heading'>Next, let {message.recipientName} hear you.</h2>
+      <p className='body'>
         Record an empathetic commitment statement as a voice message. Not sure
         what to say? We've got one ready for you.
       </p>
       <b />
-      <p>
+      <p className='body'>
         {" "}
         Hey {message.recipientName}, I want you to know that you are very
         important to me. I am committed to this relationship and I promise that
         we will this out together.
       </p>
       <header>
-        <button onClick={(e) => Startrecording(e)} disabled={isRecording}>
-          Record
-        </button>
-        <button onClick={(e) => Stoprecording(e)} disabled={!isRecording}>
-          Stop
-        </button>
+        {!isRecording ? (
+          <button
+            className='button-round'
+            onClick={(e) => Startrecording(e)}
+            disabled={isRecording}
+          >
+            <Image src={buttonRecording} alt='mic icon' />
+          </button>
+        ) : (
+          <button
+            className='button-round'
+            onClick={(e) => Stoprecording(e)}
+            disabled={!isRecording}
+          >
+            <Image src={buttonStop} alt='stop icon' />
+          </button>
+        )}
       </header>
-      <p>{`${JSON.stringify(message)}`}</p>
+      <br />
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
       <ButtonSymbol innerRef='/previewRecording' />
     </div>
   );
