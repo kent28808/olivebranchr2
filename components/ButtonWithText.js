@@ -3,15 +3,17 @@ import Image from "next/image";
 
 export default function ButtonWithText(props) {
   return (
-    <div className='button-long-text'>
-      <Link href={props.innerRef} passHref>
-        <span className='button-text'>
-          {props.text}
-          <span>
-            <Image src={props.img} alt='arrow icon' />
+    <div className='button-container'>
+      <div className='button-long-text'>
+        <Link href={props.innerRef} passHref>
+          <span className='button-text'>
+            {props.text}
+            <span>
+              <Image src={props.img} alt='arrow icon' />
+            </span>
           </span>
-        </span>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 }

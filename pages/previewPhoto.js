@@ -15,11 +15,17 @@ export default function Previewphoto() {
           className='OB-image'
           alt='progress bar3 logo'
         />
-      </div>
+      </div>{" "}
       <h2 className='heading'>Looks great!</h2>
       <br></br>
-      <p className='body'>Preview photo here</p>
-      <Image src={message.imgURL} className='preview-img' layout='fill' />
+      <Image
+        src={message.imgURL}
+        className='preview-img'
+        width='500px'
+        height='500px'
+      />
+      <br />
+      <br />
       <ButtonSymbol innerRef='/recordMessage' />
     </div>
   );

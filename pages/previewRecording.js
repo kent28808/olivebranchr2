@@ -24,6 +24,8 @@ export default function previewRecording() {
       <br />
       <h2 className='heading'>Sounds good!</h2>
       <audio src={message.blobURL} controls='controls' />
+      <br />
+      <br />
       {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
       <ButtonSymbol innerRef='/previewMessage' />
     </div>

@@ -23,6 +23,7 @@ export default function sentConfirmationScreen() {
         className='OB-image'
         alt='olive branch logo'
       />
+      <br />
       <ButtonWithText
         innerRef='/'
         text='Return to home'

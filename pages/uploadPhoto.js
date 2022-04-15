@@ -39,6 +39,7 @@ export default function uploadPhotoScreen() {
         Pick a moment from your photos to remind both of you the happy days.
       </p>
       <Dashboard uppy={uppy} />
+      <br />
       <ButtonWithText
         innerRef='/previewPhoto'
         text='Upload photo'

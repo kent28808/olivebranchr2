@@ -70,11 +70,21 @@ $gainsboro: #e1e1e1;
   padding: 20px 40px;
   border-radius: 40px;
   border: solid 1px $xanadu;
+  display: flex;
 }
 
 .button-next {
-  @include button-styling;
+  gap: 10px;
   padding: 20px 40px;
+  border-radius: 40px;
+  border: solid 1px $xanadu;
+  background-color: #fff;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button-round {
@@ -146,6 +156,12 @@ $gainsboro: #e1e1e1;
   margin-left: 400px;
   margin-right: 880px;
 }
+
+// Image
+// .OB-image {
+//   padding: 20px;
+//   margin: 20px;
+// }
 
 :export {
   fonts: {

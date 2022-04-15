@@ -110,6 +110,7 @@ export default function recordMessage() {
           </button>
         )}
       </header>
+      <br />
       {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
       <ButtonSymbol innerRef='/previewRecording' />
     </div>

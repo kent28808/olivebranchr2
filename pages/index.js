@@ -16,13 +16,15 @@ export default function Home() {
         className='OB-image'
         alt='olive branch logo'
       />
+      <br />
+      <br />
       <ButtonWithText
         innerRef='/intro'
         text='Mending hearts with your partner'
         img={arrow}
         imgClassName={".Vector-7"}
       />
-
+      <br />
       <Link href='/about' passHref>
         <div>
           <p className='body'>About the creators</p>

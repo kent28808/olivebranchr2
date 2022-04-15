@@ -26,7 +26,9 @@ export default function GetFormData(props) {
           required
         />
       </div>
-      <ButtonSymbol type='submit' />
+      <div className='button-container'>
+        <ButtonSymbol type='submit' />
+      </div>
     </form>
   );
 }
