@@ -78,9 +78,11 @@ $gainsboro: #e1e1e1;
 }
 
 .button-round {
-  @include button-styling;
-  padding: 6px 22px 16px 21px;
+  border: none !important;
+  background-color: transparent;
+  outline: none;
 }
+
 .Vector-7 > span {
   // width: 9.3px;
   // height: 18.7px;

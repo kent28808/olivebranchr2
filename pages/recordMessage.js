@@ -4,6 +4,8 @@ import ButtonSymbol from "../components/ButtonSymbol";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 import Image from "next/image";
 import progressBar4 from "../public/progress/progressbar_step4.png";
+import buttonRecording from "../public/button_recording.svg";
+import buttonStop from "../public/button_stop_recording.svg";
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
@@ -90,20 +92,23 @@ export default function recordMessage() {
         we will this out together.
       </p>
       <header>
-        <button
-          className='button-round'
-          onClick={(e) => startRecording(e)}
-          disabled={isRecording}
-        >
-          Record
-        </button>
-        <button
-          className='button-round'
-          onClick={(e) => stopRecording(e)}
-          disabled={!isRecording}
-        >
-          Stop
-        </button>
+        {!isRecording ? (
+          <button
+            className='button-round'
+            onClick={(e) => startRecording(e)}
+            disabled={isRecording}
+          >
+            <Image src={buttonRecording} alt='mic icon' />
+          </button>
+        ) : (
+          <button
+            className='button-round'
+            onClick={(e) => stopRecording(e)}
+            disabled={!isRecording}
+          >
+            <Image src={buttonStop} alt='stop icon' />
+          </button>
+        )}
       </header>
       <p className='body'>{`${JSON.stringify(message)}`}</p>
       <ButtonSymbol innerRef='/previewRecording' />
