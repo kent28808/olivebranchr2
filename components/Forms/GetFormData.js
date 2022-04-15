@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { MessageContext } from "../../context/MessageContext";
+
 export default function GetFormData(props) {
   const { setMessageValues } = useContext(MessageContext);
 
@@ -18,7 +19,9 @@ export default function GetFormData(props) {
         name={props.msgKey}
         required
       />
-      <button type='submit'>Submit</button>
+      <button className={"button button-text"} type='submit'>
+        {props.text}
+      </button>
     </form>
   );
 }
