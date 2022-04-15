@@ -67,7 +67,7 @@ h3 {
   margin-top: 40px;
 }
 
-.body-text {
+p,.body-text {
   @include text-styling($jet, $raleway-regular, 20px);
   margin-left: 400px;
   margin-right: 400px;
