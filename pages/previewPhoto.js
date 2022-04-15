@@ -21,6 +21,7 @@ export default function Previewphoto() {
       <Image
         src={message.imgURL}
         className='preview-img'
+        alt ="preview img"
         width='500px'
         height='500px'
       />
