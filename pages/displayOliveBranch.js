@@ -7,8 +7,8 @@ export default function displayOliveBranch() {
 
   return (
     <div className='container'>
-      <p>{`${JSON.stringify(ob)}`}</p>
-      <h1>{ob.senderName}</h1>
+      <p className='body'>{`${JSON.stringify(ob)}`}</p>
+      <h1 className='title'>{ob.senderName}</h1>
       <Image src={ob.imgURL} className='preview-img' layout='fill' />
       <audio src={ob.blobURL} controls='controls' />
     </div>

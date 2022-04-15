@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className='container'>
-      <h1>Olive Branch</h1>
+      <h1 className='title'>Olive Branch</h1>
       <Image
         src={oliveBranch}
         srcSet={`${oliveBranch2x} 2x, ${oliveBranch3x} 3x`}
@@ -18,14 +18,14 @@ export default function Home() {
       />
       <ButtonWithText
         innerRef='/intro'
-        text='Reconnect with your partner after a fight'
+        text='Mending hearts with your partner'
         img={arrow}
         imgClassName={".Vector-7"}
       />
 
       <Link href='/about' passHref>
         <div>
-          <p>About the creators</p>
+          <p className='body'>About the creators</p>
         </div>
       </Link>
     </div>

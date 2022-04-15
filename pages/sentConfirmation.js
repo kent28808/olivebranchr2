@@ -8,12 +8,12 @@ import ButtonWithText from "../components/ButtonWithText";
 export default function sentConfirmationScreen() {
   return (
     <div className='container'>
-      <h1>Olive Branch delivered!</h1>
-      <p>
+      <h1 className='title'>Olive Branch delivered!</h1>
+      <p className='body'>
         You just took a very important step by letting your partner know how
         much you are committed to the relationship.
       </p>
-      <p>
+      <p className='body'>
         Even if you don't get an immediate response, don't get upset! Some
         people just need more time.
       </p>

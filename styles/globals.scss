@@ -36,26 +36,19 @@ $gainsboro: #e1e1e1;
   color: $font-color;
 }
 
-h1 {
+.title {
   @include text-styling($redwood, $alegreya-regular, 60px);
-  // width: 314px; // Width is making text stop at an arbitrary spot
-  // height: 60px;
-  // margin: 0 186px 385px 0;
   line-height: 1;
 }
 
-h3 {
+.heading {
   @include text-styling($redwood, $alegreya-regular, 40px);
-  // width: 688.8px;
-  // height: 40px;
-  // margin: 5px 0 169px 5px;
   line-height: 1.2;
 }
 
-p,
+.body,
 .button-text {
   @include text-styling($jet, $raleway-regular, 20px);
-  // width: 648px;
   line-height: 1.5;
 }
 
@@ -72,11 +65,8 @@ p,
   background-color: #fff;
 }
 
-.button {
+.button-long-text {
   @include button-styling;
-  // width: 583px; // diff
-  // height: 67.4px; // diff
-  // margin: 14px 37px 99.6px 36px; // diff
   padding: 20px 40px;
   border-radius: 40px;
   border: solid 1px $xanadu;
@@ -84,13 +74,13 @@ p,
 
 .button-next {
   @include button-styling;
-  // width: 93px;
-  // height: 63px;
   padding: 20px 40px;
-  // display: inline-block;
-  // margin: 162px 281.1px 0 114px; // diff
 }
 
+.button-round {
+  @include button-styling;
+  padding: 6px 22px 16px 21px;
+}
 .Vector-7 > span {
   // width: 9.3px;
   // height: 18.7px;
@@ -106,4 +96,18 @@ p,
   margin-top: 63px;
   margin-left: 400px;
   margin-right: 880px;
+}
+
+:export {
+  fonts: {
+    alegreyaregular: $alegreya-regular;
+    ralewayregular: $raleway-regular;
+  }
+  colors: {
+    redwood: $redwood;
+    huntergreen: $hunter-green;
+    jet: $jet;
+    xanadu: $xanadu;
+    gainsboro: $gainsboro;
+  }
 }
