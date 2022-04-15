@@ -92,6 +92,53 @@ $gainsboro: #e1e1e1;
   padding: 1.7px 1.9px 1.7px 1.8px;
 }
 
+// Forms
+.input-container {
+  position: relative;
+  padding: 20px;
+  margin: 75px;
+  .line {
+    width: 100%;
+    // height: 3px;
+    // position: absolute;
+    bottom: -8px;
+    background: $jet;
+
+    &:after {
+      content: "";
+      position: absolute;
+      float: right;
+      width: 100%;
+      height: 3px;
+
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+
+      background: $jet;
+    }
+  }
+}
+.input-field {
+  font-family: $raleway-regular;
+  font-size: 20px;
+  color: $jet;
+  width: 100%;
+  border: 0;
+  outline: none;
+  transition: padding 0.3s 0.2s ease;
+  border-bottom: solid 2px $jet;
+
+  &:focus {
+    padding-bottom: 5px;
+  }
+
+  &:focus + .line {
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
 .progressbranch {
   width: 160px;
   height: 132px;

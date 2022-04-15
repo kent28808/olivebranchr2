@@ -17,12 +17,15 @@ export default function GetFormData(props) {
 
   return (
     <form onSubmit={(e) => handleSubmit(props.msgKey, e)}>
-      <input
-        type={props.inputType}
-        id={props.inputId}
-        name={props.msgKey}
-        required
-      />
+      <div className='input-container'>
+        <input
+          className='input-field'
+          type={props.inputType}
+          id={props.inputId}
+          name={props.msgKey}
+          required
+        />
+      </div>
       <ButtonSymbol type='submit' />
     </form>
   );

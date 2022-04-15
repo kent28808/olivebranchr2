@@ -24,7 +24,7 @@ export default function userNameScreen() {
         href='/recipientName'
         buttonType='symbol'
       />
-      <p className='body'>{`${JSON.stringify(message)}`}</p>
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
     </div>
   );
 }

@@ -26,19 +26,14 @@ export default function recipientPhoneScreen() {
         msgKey='recipientNumber'
         inputId='recipient-number'
         pattern='[0-9]{3}[0-9]{3}[0-9]{4}'
+        href='/sentConfirmation'
       />
       <br />
       <p className='body'>
         Please enter your 10 digit phone number (no dashes)
       </p>
       {/* US numbers only right now */}
-      <p className='body'>{`${JSON.stringify(message)}`}</p>
-      <ButtonWithText
-        innerRef='/sentConfirmation'
-        text='Create your own Olive Branch'
-        img={arrow}
-        imgClassName={".Vector-7"}
-      />
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
     </div>
   );
 }

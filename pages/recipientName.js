@@ -26,7 +26,7 @@ export default function recipientNameScreen() {
         href='/uploadPhoto'
         buttonType='symbol'
       />
-      <p className='body'>{`${JSON.stringify(message)}`}</p>
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
     </div>
   );
 }
