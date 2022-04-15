@@ -8,12 +8,12 @@ import progressBar4 from "../public/progress/progressbar_step4.png"
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
-export default function recordMessage() {
+export default function Recordmessage() {
   const { message, setMessageValues } = useContext(MessageContext);
   const [isRecording, setIsRecording] = useState(false);
   const [isBlocked, setisBlocked] = useState(false);
 
-  function startRecording() {
+  function Startrecording() {
     if (isBlocked) {
       console.log("Permission Denied");
     } else {
@@ -25,7 +25,7 @@ export default function recordMessage() {
     }
   }
 
-  function stopRecording() {
+  function Stoprecording() {
     Mp3Recorder.stop()
       .getMp3()
       .then(([buffer, blob]) => {
@@ -91,10 +91,10 @@ export default function recordMessage() {
         we will this out together.
       </p>
       <header>
-        <button onClick={(e) => startRecording(e)} disabled={isRecording}>
+        <button onClick={(e) => Startrecording(e)} disabled={isRecording}>
           Record
         </button>
-        <button onClick={(e) => stopRecording(e)} disabled={!isRecording}>
+        <button onClick={(e) => Stoprecording(e)} disabled={!isRecording}>
           Stop
         </button>
       </header>

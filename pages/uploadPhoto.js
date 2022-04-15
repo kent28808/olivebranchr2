@@ -11,7 +11,7 @@ import progressBar3 from "../public/progress/progressbar_step3.png"
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
 
-export default function uploadPhotoScreen() {
+export default function Uploadphotoscreen() {
   const { message, setMessageValues } = useContext(MessageContext);
   const uppy = new Uppy().use(Tus, {
     endpoint: "https://tusd.tusdemo.net/files/",

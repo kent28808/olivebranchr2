@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import ButtonSymbol from "../components/ButtonSymbol";
 
-export default function verifyOliveBranch({ oliveBranches }) {
+export default function Verifyolivebranch({ oliveBranches }) {
   const { ob, setObValues } = useContext(MessageContext);
 
-  async function validateRecipient(e) {
+  async function Validaterecipient(e) {
     e.preventDefault();
     let verifyPhone = e.target.verifyPhone.value;
     let verifyCode = e.target.verifyCode.value;
@@ -24,7 +24,7 @@ export default function verifyOliveBranch({ oliveBranches }) {
   return (
     <div className='container'>
       <p>{`${JSON.stringify(ob)}`}</p>
-      <form onSubmit={(e) => validateRecipient(e)}>
+      <form onSubmit={(e) => Validaterecipient(e)}>
         <input type='text' name='senderNumber' id='verifyPhone' required />
         <input type='text' name='verifyCode' id='verifyCode' required />
         <button className={"button button-text"} type='submit'>
@@ -36,7 +36,7 @@ export default function verifyOliveBranch({ oliveBranches }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function Getserversideprops(context) {
   let res = await fetch("http://localhost:3000/api/oliveBranch", {
     method: "GET",
     headers: {

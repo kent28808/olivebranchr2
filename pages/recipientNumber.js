@@ -6,7 +6,7 @@ import arrow from "../public/arrow.png";
 import Image from "next/image";
 import progressBar6 from "../public/progress/progressbar_step6.png"
 
-export default function recipientPhoneScreen() {
+export default function Recipientphonescreen() {
   const { message } = useContext(MessageContext);
 
   return (

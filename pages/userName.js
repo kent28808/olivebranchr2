@@ -5,7 +5,7 @@ import GetFormData from "../components/Forms/GetFormData";
 import ButtonSymbol from "../components/ButtonSymbol";
 import progressBar1 from "../public/progress/progressbar_step1.png"
 
-export default function userNameScreen() {
+export default function Usernamescreen() {
   const { message } = useContext(MessageContext);
 
   return (

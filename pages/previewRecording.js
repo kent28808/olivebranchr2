@@ -4,7 +4,7 @@ import ButtonSymbol from "../components/ButtonSymbol";
 import Image from "next/image";
 import progressBar4 from "../public/progress/progressbar_step4.png"
 
-export default function previewRecording() {
+export default function Previewrecording() {
   const { message } = useContext(MessageContext);
 
   return (
