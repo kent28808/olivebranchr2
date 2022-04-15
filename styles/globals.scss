@@ -39,9 +39,8 @@ $gainsboro: #e1e1e1;
 h1 {
   @include text-styling($redwood, $alegreya-regular, 60px);
   // width: 314px; // Width is making text stop at an arbitrary spot
-  height: 80px;
+  // height: 60px;
   // margin: 0 186px 385px 0;
-  margin-top: 200px;
   line-height: 1;
 }
 
@@ -50,44 +49,14 @@ h3 {
   // width: 688.8px;
   // height: 40px;
   // margin: 5px 0 169px 5px;
-  margin-top: 200px;
-  margin-bottom: 4px;
-  width: 701px;
   line-height: 1.2;
 }
 
-.h3intro {
-  margin-top: -160px;
-  font-size: 100px
-}
-
-.creators {
-  @include text-styling($jet, $raleway-regular, 18px);
-  align-items: center;
-  margin-top: 40px;
-}
-
-p,.body-text {
-  @include text-styling($jet, $raleway-regular, 20px);
-  margin-left: 400px;
-  margin-right: 400px;
-  width: 701px;
-  align-content: center;
-}
-
+p,
 .button-text {
-  @include text-styling($jet, $raleway-regular, 25px);
+  @include text-styling($jet, $raleway-regular, 20px);
   // width: 648px;
-  // line-height: 1.5;
-  display: flex;
-  justify-content: center;
-}
-
-.button-text > span {
-  margin-left: 22px;
-  display: flex;
-  padding: 4px 0px;
-
+  line-height: 1.5;
 }
 
 // Buttons
@@ -105,10 +74,9 @@ p,.body-text {
 
 .button {
   @include button-styling;
-  width: 503px; // diff
+  // width: 583px; // diff
   // height: 67.4px; // diff
   // margin: 14px 37px 99.6px 36px; // diff
-  margin-top: 80px;
   padding: 20px 40px;
   border-radius: 40px;
   border: solid 1px $xanadu;
@@ -123,14 +91,13 @@ p,.body-text {
   // margin: 162px 281.1px 0 114px; // diff
 }
 
-.Vector-7 {
+.Vector-7 > span {
   // width: 9.3px;
   // height: 18.7px;
   // transform: rotate(-90deg);
   // border: solid 2px $hunter-green;
   // margin: 2.7px 0 2.7px 20px;
   padding: 1.7px 1.9px 1.7px 1.8px;
-  display:block;
 }
 
 .progressbranch {
@@ -138,6 +105,5 @@ p,.body-text {
   height: 132px;
   margin-top: 63px;
   margin-left: 400px;
-  margin-right: 880px
+  margin-right: 880px;
 }
-// Recording button has different styling

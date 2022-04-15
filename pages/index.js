@@ -24,11 +24,10 @@ export default function Home() {
       />
 
       <Link href='/about' passHref>
-      <div className='creators'>
-      <p>About the creators</p>
-      </div>
+        <div>
+          <p>About the creators</p>
+        </div>
       </Link>
-     
     </div>
   );
 }
