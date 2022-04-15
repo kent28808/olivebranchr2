@@ -5,7 +5,7 @@ import Image from "next/image";
 import progressBar5 from "../public/progress/progressbar_step5.png"
 
 
-export default function previewMessageScreen() {
+export default function Previewmessagescreen() {
   const { message } = useContext(MessageContext);
 
   return (
