@@ -4,7 +4,7 @@ import { MessageContext } from "../context/MessageContext";
 import ButtonSymbol from "../components/ButtonSymbol";
 import progressBar3 from "../public/progress/progressbar_step2.png"
 
-export default function previewPhoto() {
+export default function Previewphoto() {
   const { message } = useContext(MessageContext);
 
   return (
