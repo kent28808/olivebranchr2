@@ -10,4 +10,7 @@ module.exports = withPWA({
   images: {
     domains: ["tusd.tusdemo.net"],
   },
+  // sassOptions: {
+  //   includePaths: [path.join(__dirname, "styles")],
+  // },
 });

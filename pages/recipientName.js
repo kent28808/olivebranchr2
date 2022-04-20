@@ -1,30 +1,32 @@
-import Image from "next/image"
+import Image from "next/image";
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import GetFormData from "../components/Forms/GetFormData";
-import ButtonSymbol from "../components/ButtonSymbol";
-import progressBar2 from "../public/progress/progressbar_step2.png"
+import progressBar2 from "../public/progress/progressbar_step2.png";
 
-export default function recipientNameScreen() {
+export default function Recipientnamescreen() {
   const { message } = useContext(MessageContext);
 
   return (
     <div className='container'>
       <div className='progressbranch'>
-      <Image
-        src={progressBar2}
-        className='OB-image'
-        alt='progress bar2 logo'
-      />
+        <Image
+          src={progressBar2}
+          className='OB-image'
+          alt='progress bar2 logo'
+        />
       </div>
-      <h3>Hey {message.senderName}, who are you reaching out to?</h3>
+      <h2 className='heading'>
+        Hey {message.senderName}, who are you reaching out to?
+      </h2>
       <GetFormData
-        dataType='text'
-        msgKey='recipientName'
+        inputType='text'
         inputId='recipient-name'
+        msgKey='recipientName'
+        href='/uploadPhoto'
+        buttonType='symbol'
       />
-      <p>{`${JSON.stringify(message)}`}</p>
-      <ButtonSymbol innerRef='/uploadPhoto' />
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
     </div>
   );
 }

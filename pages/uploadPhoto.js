@@ -7,11 +7,11 @@ import Tus from "@uppy/tus";
 import { Dashboard } from "@uppy/react";
 import ButtonWithText from "../components/ButtonWithText";
 import arrow from "../public/arrow.png";
-import progressBar3 from "../public/progress/progressbar_step3.png"
+import progressBar3 from "../public/progress/progressbar_step3.png";
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
 
-export default function uploadPhotoScreen() {
+export default function Uploadphotoscreen() {
   const { message, setMessageValues } = useContext(MessageContext);
   const uppy = new Uppy().use(Tus, {
     endpoint: "https://tusd.tusdemo.net/files/",
@@ -25,27 +25,30 @@ export default function uploadPhotoScreen() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-      <Image
-        src={progressBar3}
-        className='OB-image'
-        alt='progress bar3 logo'
-      />
+        <Image
+          src={progressBar3}
+          className='OB-image'
+          alt='progress bar3 logo'
+        />
       </div>
-      <h3>Next, let's make sure your partner can see you.</h3>
+      <h2 className='heading'>
+        Next, let's make sure your partner can see you.
+      </h2>
       <br></br>
-      <p>
+      <p className='body'>
         Pick a moment from your photos to remind both of you the happy days.
       </p>
       <Dashboard uppy={uppy} />
+      <br />
       <ButtonWithText
         innerRef='/previewPhoto'
         text='Upload photo'
         img={arrow}
         imgClassName={".Vector-7"}
       />
-      <p>{`${JSON.stringify(message)}`}</p>
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
       <Link href='/recordMessage' passHref>
-        <p>Skip</p>
+        <p className='body'>Skip</p>
       </Link>
     </div>
   );
