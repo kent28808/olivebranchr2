@@ -33,7 +33,7 @@ export default function Recipientphonescreen() {
         Please enter your 10 digit phone number (no dashes)
       </p>
       {/* US numbers only right now */}
-      <p className='body'>{`${JSON.stringify(message)}`}</p>
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
     </div>
   );
 }

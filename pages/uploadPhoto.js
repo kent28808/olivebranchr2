@@ -46,7 +46,7 @@ export default function Uploadphotoscreen() {
         img={arrow}
         imgClassName={".Vector-7"}
       />
-      <p className='body'>{`${JSON.stringify(message)}`}</p>
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
       <Link href='/recordMessage' passHref>
         <p className='body'>Skip</p>
       </Link>
