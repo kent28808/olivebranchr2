@@ -53,6 +53,7 @@ $gainsboro: #e1e1e1;
 .button-text {
   @include text-styling($jet, $raleway-regular, 20px);
   line-height: 1.5;
+  cursor: default;
 }
 
 // Buttons
@@ -74,6 +75,7 @@ $gainsboro: #e1e1e1;
   border-radius: 40px;
   border: solid 1px $xanadu;
   display: flex;
+  cursor:default;
 }
 
 .button-next {
@@ -82,6 +84,7 @@ $gainsboro: #e1e1e1;
   border-radius: 40px;
   border: solid 1px $xanadu;
   background-color: #fff;
+  cursor: default;
 }
 
 .button-container {
@@ -162,10 +165,10 @@ $gainsboro: #e1e1e1;
 
 .progressbranch {
   width: 160px;
-  height: 132px;
+  height: 137px;
   margin-top: 63px;
   margin-left: 400px;
-  margin-right: 880px;
+  margin-right: 874px;
 }
 
 // Image
