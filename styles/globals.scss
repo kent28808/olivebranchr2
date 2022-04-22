@@ -84,7 +84,7 @@ $gainsboro: #e1e1e1;
   border-radius: 40px;
   border: solid 1px $xanadu;
   background-color: #fff;
-  cursor: default;
+  cursor: default !important;
 }
 
 .button-container {
@@ -99,6 +99,9 @@ $gainsboro: #e1e1e1;
   outline: none;
 }
 
+.button-symbol {
+  cursor: default;
+}
 // .button-text > span {
 //   margin-left: 22px;
 //   display: flex;
