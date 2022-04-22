@@ -96,6 +96,12 @@ $gainsboro: #e1e1e1;
   outline: none;
 }
 
+// .button-text > span {
+//   margin-left: 22px;
+//   display: flex;
+//   padding: 4px 0px;
+// }
+
 .Vector-7 > span {
   // width: 9.3px;
   // height: 18.7px;
@@ -133,16 +139,18 @@ $gainsboro: #e1e1e1;
 }
 .input-field {
   font-family: $raleway-regular;
-  font-size: 20px;
+  font-size: 40px;
   color: $jet;
-  width: 100%;
+  width: 650px;
+  text-align: center;
   border: 0;
   outline: none;
   transition: padding 0.3s 0.2s ease;
   border-bottom: solid 2px $jet;
 
+  //Do we need this?
   &:focus {
-    padding-bottom: 5px;
+    // padding-bottom: 5px;
   }
 
   &:focus + .line {
