@@ -44,9 +44,6 @@ $gainsboro: #e1e1e1;
 .heading {
   @include text-styling($redwood, $alegreya-regular, 40px);
   line-height: 1.2;
-  .intro{
-
-  }
 }
 
 .body,
@@ -75,7 +72,7 @@ $gainsboro: #e1e1e1;
   border-radius: 40px;
   border: solid 1px $xanadu;
   display: flex;
-  cursor:default;
+  cursor: default;
 }
 
 .button-next {
@@ -155,9 +152,9 @@ $gainsboro: #e1e1e1;
   border-bottom: solid 2px $jet;
 
   //Do we need this?
-  &:focus {
-    // padding-bottom: 5px;
-  }
+  // &:focus {
+  //   padding-bottom: 5px;
+  // }
 
   &:focus + .line {
     &:after {
