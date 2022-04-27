@@ -21,7 +21,7 @@ The desire for human connection is a core human need.  However, when couples fig
 <p>&nbsp</p>  
 
 ## Visuals
-![visual](public/button_recording.svg)
+![visual](public/branch.gif)
 
 <p>&nbsp</p> 
 
