@@ -1,35 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Olive Branch
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eb52c22e-4af8-4714-88b9-6d8337aa11ee/deploy-status)](https://app.netlify.com/sites/olivebranch/deploys)
 
-## Getting Started
 
-First, run the development server:
+## Table of Contents
+  * [Problem Background](#Problembackground)
+  * [Visuals](#Visuals)
+  * [Lofi & Hifi Mockups](#Lofi&HifiMockups)
+  * [Installation](#Installation)
+  * [Technologies](#Technologies)
+  * [Deployed Site](#Deployed-Link)
+  * [Contributors](#Contributors)
+<p>&nbsp</p>  
 
+---
+<p>&nbsp</p>  
+
+## Problem Background
+The desire for human connection is a core human need.  However, when couples fight, that empathic connection to each other is temporarily lost which can lead to a further breakdown in communication. While most market offerings attempt to directly resolve the conflict, our team was curious about how effective communication techniques can help couples stay in connection with one another in these moments of disconnection. Our hypothesis, inspired by Marshall Rosenberg’s Nonviolent Communication, is that helping couples re-establish an empathic connection to one another first would help them reconcile more effectively. 
+
+<p>&nbsp</p>  
+
+## Visuals
+![visual](public/branch.gif)
+
+<p>&nbsp</p> 
+
+## Lofi & Hifi Mockups
+![Lofi](public/Lofi.png)
+
+![Hifi](public/hifi.png)
+
+<p>&nbsp</p> 
+
+## Installation
+To install a project, run:
+```bash
+npx create-next-app@latest
+# or
+yarn create next-app
+```
+
+After the installation is complete, run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 ```
+Visit http://localhost:3000 to view your application.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For more information on how to use create-next-app, you can review the [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) documentation.
+<p>&nbsp</p> 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Technologies
+* Next.js 
+* React.js
+* Sass
+* JavaScript
+* Uppy.io
+* Twilio
+* Figma
+* Zeplin
+* Miro
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<p>&nbsp</p> 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Deployed Site
+[Live Site](https://olivebranch.netlify.app/)
 
-## Learn More
+[Demo Video](https://www.joincolab.io/projects/olive-branch)
+<p>&nbsp</p> 
 
-To learn more about Next.js, take a look at the following resources:
+## Contributors
+* Marissa [LinkedIn](https://www.linkedin.com/in/marissa-o/) [Github](https://github.com/marissao)
+* Alex [LinkedIn](https://www.linkedin.com/in/itsalexlee/) [Portfolio](https://itsalexlee.com/product)
+* Cheng [LinkedIn](https://www.linkedin.com/in/chengux/) [Portfolio](https://www.chengg.design/)
+* Ken [LinkedIn](https://www.linkedin.com/in/kent28808/) [Github](https://github.com/kent28808)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# olivebranchr2
+
