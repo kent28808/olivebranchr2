@@ -26,6 +26,9 @@ The desire for human connection is a core human need.  However, when couples fig
 <p>&nbsp</p> 
 
 ## Lofi & Hifi Mockups
+![Lofi](public/Lofi.png)
+
+![Hifi](public/hifi.png)
 
 <p>&nbsp</p> 
 
