@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import GetFormData from "../components/Forms/GetFormData";
 import ButtonWithText from "../components/ButtonWithText";
+import ButtonBack from "../components/ButtonBack";
 import arrow from "../public/arrow.png";
 import Image from "next/image";
 import progressBar6 from "../public/progress/progressbar_step6.png";
@@ -18,9 +19,10 @@ export default function Recipientphonescreen() {
           alt='progress bar6 logo'
         />
       </div>
-      <h2 className='heading'>
-        Awesome. What's {message.recipientName}'s phone number?
-      </h2>
+      <ButtonBack
+        innerRef='/previewMessage'
+        headerText={`What's ${message.recipientName}'s phone number?`}
+      />
       <GetFormData
         dataType='tel'
         msgKey='recipientNumber'

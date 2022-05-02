@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import ButtonForward from "../components/ButtonForward";
+import ButtonBack from "../components/ButtonBack"
 import Image from "next/image";
 import progressBar4 from "../public/progress/progressbar_step4.png";
 
@@ -16,7 +17,10 @@ export default function Previewrecording() {
           alt='progress bar4 logo'
         />
       </div>
-      <h2 className='heading'>Next, let {message.recipientName} hear you.</h2>
+      <ButtonBack
+        innerRef='/recordMessage'
+        headerText={`Next, let ${message.recipientName} hear you.`}
+      />
       <p className='body'>
         Record an empathetic commitment statement as a voice message. Not sure
         what to say? We've got one ready for you.

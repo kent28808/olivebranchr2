@@ -6,6 +6,7 @@ import Image from "next/image";
 import progressBar4 from "../public/progress/progressbar_step4.png";
 import buttonRecording from "../public/button_recording.svg";
 import buttonStop from "../public/button_stop_recording.svg";
+import ButtonBack from "../components/ButtonBack";
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
@@ -79,7 +80,10 @@ export default function Recordmessage() {
           alt='progress bar4 logo'
         />
       </div>
-      <h2 className='heading'>Next, let {message.recipientName} hear you.</h2>
+      <ButtonBack
+        innerRef='/previewPhoto'
+        headerText={`Next, let ${message.recipientName} hear you.`}
+      />
       <p className='body'>
         Record an empathetic commitment statement as a voice message. Not sure
         what to say? We've got one ready for you.
