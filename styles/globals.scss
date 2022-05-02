@@ -92,6 +92,13 @@ $gainsboro: #e1e1e1;
   cursor: default !important;
 }
 
+.button-back {
+  gap: 10px;
+  padding: 20px 40px;
+  background-color: #fff;
+  cursor: default !important;
+}
+
 .button-container {
   display: flex;
   align-items: center;
@@ -112,15 +119,6 @@ $gainsboro: #e1e1e1;
 //   display: flex;
 //   padding: 4px 0px;
 // }
-
-.Vector-7 > span {
-  // width: 9.3px;
-  // height: 18.7px;
-  // transform: rotate(-90deg);
-  // border: solid 2px $hunter-green;
-  // margin: 2.7px 0 2.7px 20px;
-  padding: 1.7px 1.9px 1.7px 1.8px;
-}
 
 // Forms
 .input-container {

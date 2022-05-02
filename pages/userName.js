@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext"; // Wrap in {} b/c exported context w/o keyword default
 import GetFormData from "../components/Forms/GetFormData";
 import progressBar1 from "../public/progress/progressbar_step1.png";
+import ButtonBack from "../components/ButtonBack";
 
 export default function Usernamescreen() {
   const { message } = useContext(MessageContext);
@@ -16,7 +17,7 @@ export default function Usernamescreen() {
           alt='progress bar1 logo'
         />
       </div>
-      <h2 className='heading'>What's your name?</h2>
+      <ButtonBack innerRef='/intro' headerText="What's your name?" />
       <GetFormData
         inputType='text'
         inputId='sender-name'

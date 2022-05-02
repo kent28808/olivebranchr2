@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import buttonForward from "../public/button_forward.svg";
 
 export default function ButtonWithText(props) {
   return (
@@ -9,7 +10,7 @@ export default function ButtonWithText(props) {
           <span className='button-text'>
             {props.text}
             <span>
-              <Image src={props.img} alt='arrow icon' />
+              <Image src={buttonForward} alt='arrow icon' />
             </span>
           </span>
         </Link>

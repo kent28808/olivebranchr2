@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
-import ButtonSymbol from "../components/ButtonSymbol";
+import ButtonForward from "../components/ButtonForward";
 import progressBar3 from "../public/progress/progressbar_step2.png";
 
 export default function Previewphoto() {
@@ -21,13 +21,13 @@ export default function Previewphoto() {
       <Image
         src={message.imgURL}
         className='preview-img'
-        alt ="preview"
+        alt='preview'
         width='500px'
         height='500px'
       />
       <br />
       <br />
-      <ButtonSymbol innerRef='/recordMessage' />
+      <ButtonForward innerRef='/recordMessage' />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { MessageContext } from "../context/MessageContext";
-import ButtonSymbol from "../components/ButtonSymbol";
+import ButtonForward from "../components/ButtonForward";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 import Image from "next/image";
 import progressBar4 from "../public/progress/progressbar_step4.png";
@@ -112,7 +112,7 @@ export default function Recordmessage() {
       </header>
       <br />
       {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
-      <ButtonSymbol innerRef='/previewRecording' />
+      <ButtonForward innerRef='/previewRecording' />
     </div>
   );
 }

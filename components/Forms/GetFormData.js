@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { MessageContext } from "../../context/MessageContext";
 import { useRouter } from "next/router";
-import ButtonSymbol from "../ButtonSymbol";
+import ButtonForward from "../ButtonForward";
 
 export default function GetFormData(props) {
   const { setMessageValues } = useContext(MessageContext);
@@ -27,7 +27,7 @@ export default function GetFormData(props) {
         />
       </div>
       <div className='button-container'>
-        <ButtonSymbol type='submit' />
+        <ButtonForward type='submit' />
       </div>
     </form>
   );

@@ -4,7 +4,8 @@ import ButtonWithText from "../components/ButtonWithText";
 import oliveBranch from "../public/index/ob-image.png";
 import oliveBranch2x from "../public/index/ob-image@2x.png";
 import oliveBranch3x from "../public/index/ob-image@3x.png";
-import arrow from "../public/arrow.png";
+// import arrow from "../public/arrow.png";
+
 import Link from "next/link";
 
 export default function Home() {
@@ -12,8 +13,8 @@ export default function Home() {
     <div>
       <Head>
         <title>Olive Branch</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta charSet='utf-8' />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       <div className='container'>
         <h1 className='title'>Olive Branch</h1>
@@ -28,8 +29,8 @@ export default function Home() {
         <ButtonWithText
           innerRef='/intro'
           text='Mending hearts with your partner'
-          img={arrow}
-          imgClassName={".Vector-7"}
+          // img={arrow}
+          // imgClassName={".Vector-7"}
         />
         <br />
         <Link href='/about' passHref>

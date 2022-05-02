@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
-import ButtonSymbol from "../components/ButtonSymbol";
+import ButtonForward from "../components/ButtonForward";
 
 export default function Verifyolivebranch({ oliveBranches }) {
   const { ob, setObValues } = useContext(MessageContext);
@@ -31,7 +31,7 @@ export default function Verifyolivebranch({ oliveBranches }) {
           Validate
         </button>
       </form>
-      <ButtonSymbol innerRef='/displayOliveBranch' />
+      <ButtonForward innerRef='/displayOliveBranch' />
     </div>
   );
 }
