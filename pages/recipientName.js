@@ -18,7 +18,7 @@ export default function Recipientnamescreen() {
         />
       </div>
       <ButtonBack
-        innerRef='/intro'
+        innerRef='/userName'
         headerText={`Hey ${message.senderName}, who are you reaching out to?`}
       />
       <GetFormData

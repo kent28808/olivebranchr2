@@ -8,6 +8,7 @@ import { Dashboard } from "@uppy/react";
 import ButtonWithText from "../components/ButtonWithText";
 import arrow from "../public/arrow.png";
 import progressBar3 from "../public/progress/progressbar_step3.png";
+import ButtonBack from "../components/ButtonBack";
 import "@uppy/core/dist/style.css";
 import "@uppy/dashboard/dist/style.css";
 
@@ -31,9 +32,10 @@ export default function Uploadphotoscreen() {
           alt='progress bar3 logo'
         />
       </div>
-      <h2 className='heading'>
-        Next, let's make sure your partner can see you.
-      </h2>
+      <ButtonBack
+        innerRef='/userName'
+        headerText={`First, make sure ${message.recipientName} sees you.`}
+      />
       <br></br>
       <p className='body'>
         Pick a moment from your photos to remind both of you the happy days.
