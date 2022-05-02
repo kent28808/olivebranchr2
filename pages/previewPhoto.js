@@ -19,8 +19,7 @@ export default function Previewphoto() {
       </div>{" "}
       <ButtonBack innerRef='/uploadPhoto' headerText='Looks good. Thanks!' />
       <br></br>
-      <Image
-        src={message.imgURL}
+      <Image src={message.imgURL}
         className='preview-img'
         alt='preview'
         width='500px'

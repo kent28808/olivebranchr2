@@ -33,7 +33,7 @@ export default function Uploadphotoscreen() {
         />
       </div>
       <ButtonBack
-        innerRef='/userName'
+        innerRef='/recipientName'
         headerText={`First, make sure ${message.recipientName} sees you.`}
       />
       <br></br>

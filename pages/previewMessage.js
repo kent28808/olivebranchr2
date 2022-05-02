@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import ButtonForward from "../components/ButtonForward";
+import ButtonBack from "../components/ButtonBack";
 import Image from "next/image";
 import progressBar5 from "../public/progress/progressbar_step5.png";
 
@@ -16,7 +17,7 @@ export default function Previewmessagescreen() {
           alt='progress bar5 logo'
         />
       </div>
-      <h2 className='heading'>Thanks for sharing!</h2>
+      <ButtonBack innerRef='/previewRecording' headerText='Thanks for sharing!' />
       <p className='body'>
         Here's a preview of the Olive Branch that we created for you to
         {message.recipientName}
