@@ -1,8 +1,7 @@
 import "./Button.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-// import arrow from "../public/arrow.png";
-import buttonForward from "../public/button_forward.svg";
+import buttonForward from "../public/svg/button_forward.svg";
 
 export default function NextButton(props) {
   return (

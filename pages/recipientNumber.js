@@ -1,9 +1,7 @@
 import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import GetFormData from "../components/Forms/GetFormData";
-import ButtonWithText from "../components/ButtonWithText";
 import ButtonBack from "../components/ButtonBack";
-import arrow from "../public/arrow.png";
 import Image from "next/image";
 import progressBar6 from "../public/progress/progressbar_step6.png";
 
@@ -31,9 +29,9 @@ export default function Recipientphonescreen() {
         href='/sentConfirmation'
       />
       <br />
-      <p className='body'>
+      {/* <p className='body'>
         Please enter your 10 digit phone number (no dashes)
-      </p>
+      </p> */}
       {/* US numbers only right now */}
       {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
     </div>

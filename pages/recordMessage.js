@@ -4,8 +4,8 @@ import ButtonForward from "../components/ButtonForward";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 import Image from "next/image";
 import progressBar4 from "../public/progress/progressbar_step4.png";
-import buttonRecording from "../public/button_recording.svg";
-import buttonStop from "../public/button_stop_recording.svg";
+import buttonRecording from "../public/svg/button_recording.svg";
+import buttonStop from "../public/svg/button_stop_recording.svg";
 import ButtonBack from "../components/ButtonBack";
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
