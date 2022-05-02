@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { MessageContext } from "../context/MessageContext";
 import GetFormData from "../components/Forms/GetFormData";
 import progressBar2 from "../public/progress/progressbar_step2.png";
+import ButtonBack from "../components/ButtonBack";
 
 export default function Recipientnamescreen() {
   const { message } = useContext(MessageContext);
@@ -16,9 +17,10 @@ export default function Recipientnamescreen() {
           alt='progress bar2 logo'
         />
       </div>
-      <h2 className='heading'>
-        Hey {message.senderName}, who are you reaching out to?
-      </h2>
+      <ButtonBack
+        innerRef='/userName'
+        headerText={`Hey ${message.senderName}, who are you reaching out to?`}
+      />
       <GetFormData
         inputType='text'
         inputId='recipient-name'
