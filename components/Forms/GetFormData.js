@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { MessageContext } from "../../context/MessageContext";
 import { useRouter } from "next/router";
 import ButtonForward from "../ButtonForward";
+import ButtonWithText from "../ButtonWithText";
 
 export default function GetFormData(props) {
   const { setMessageValues } = useContext(MessageContext);
@@ -27,7 +28,11 @@ export default function GetFormData(props) {
         />
       </div>
       <div className='button-container'>
-        <ButtonForward type='submit' />
+        {props.buttonType === "text" ? (
+          <ButtonWithText innerRef={props.href} text={props.text} />
+        ) : (
+          <ButtonForward type='submit' />
+        )}
       </div>
     </form>
   );

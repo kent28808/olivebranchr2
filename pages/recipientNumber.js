@@ -27,6 +27,8 @@ export default function Recipientphonescreen() {
         inputId='recipient-number'
         pattern='[0-9]{3}[0-9]{3}[0-9]{4}'
         href='/sentConfirmation'
+        buttonType='text'
+        text='Send the Olive Branch'
       />
       <br />
       {/* <p className='body'>
