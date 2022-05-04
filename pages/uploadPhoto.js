@@ -5,8 +5,7 @@ import { MessageContext } from "../context/MessageContext";
 import Uppy from "@uppy/core";
 import Tus from "@uppy/tus";
 import { Dashboard } from "@uppy/react";
-import ButtonWithText from "../components/ButtonWithText";
-import arrow from "../public/arrow.png";
+import ButtonUpload from "../components/ButtonUpload";
 import progressBar3 from "../public/progress/progressbar_step3.png";
 import ButtonBack from "../components/ButtonBack";
 import "@uppy/core/dist/style.css";
@@ -42,12 +41,7 @@ export default function Uploadphotoscreen() {
       </p>
       <Dashboard uppy={uppy} />
       <br />
-      <ButtonWithText
-        innerRef='/previewPhoto'
-        text='Upload photo'
-        img={arrow}
-        imgClassName={".Vector-7"}
-      />
+      <ButtonUpload innerRef='/previewPhoto' text='Upload photo' />
       {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
       <Link href='/recordMessage' passHref>
         <p className='body'>Skip</p>

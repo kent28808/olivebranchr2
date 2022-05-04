@@ -2,7 +2,6 @@ import Image from "next/image";
 import oliveBranch from "../public/confirmation/ob-image.png";
 import oliveBranch2x from "../public/confirmation/ob-image@2x.png";
 import oliveBranch3x from "../public/confirmation/ob-image@3x.png";
-import arrow from "../public/arrow.png";
 import ButtonWithText from "../components/ButtonWithText";
 
 export default function sentConfirmationScreen() {
@@ -24,12 +23,7 @@ export default function sentConfirmationScreen() {
         alt='olive branch logo'
       />
       <br />
-      <ButtonWithText
-        innerRef='/'
-        text='Return to home'
-        img={arrow}
-        imgClassName={".Vector-7"}
-      />
+      <ButtonWithText innerRef='/' text='Return to home' />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import ButtonWithText from "../components/ButtonWithText";
-import arrow from "../public/arrow.png";
 
 export default function initialHelpscreen() {
   return (
@@ -26,8 +25,6 @@ export default function initialHelpscreen() {
       <ButtonWithText
         innerRef='/userName'
         text='Create your own Olive Branch'
-        img={arrow}
-        imgClassName={".Vector-7"}
       />
     </div>
   );
