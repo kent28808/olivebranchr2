@@ -1,4 +1,5 @@
 import ButtonWithText from "../components/ButtonWithText";
+import ButtonWithTextOnboarding from "../components/ButtonWithTextOnboarding";
 
 export default function initialHelpscreen() {
   return (
@@ -22,7 +23,7 @@ export default function initialHelpscreen() {
           way.
         </p>
       </div>
-      <ButtonWithText
+      <ButtonWithTextOnboarding
         innerRef='/userName'
         text='Create your own Olive Branch'
       />
