@@ -46,10 +46,17 @@ $gainsboro: #e1e1e1;
   line-height: 1.2;
 }
 
-.body,
-.button-text {
+.body {
   @include text-styling($jet, $raleway-regular, 20px);
   line-height: 1.5;
+  cursor: default;
+}
+
+.button-text {
+  @include text-styling($hunter-green, $raleway-regular, 25px);
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
   cursor: default;
 }
 
@@ -81,6 +88,15 @@ $gainsboro: #e1e1e1;
   border: solid 1px $xanadu;
   display: flex;
   cursor: default;
+  .index {
+    width: 503px;
+  }
+}
+// Long Button > Spacing
+.button-text > span {
+  margin-left: 20px;
+  // display: flex;
+  padding: 20px 0px;
 }
 
 .button-next {
@@ -120,11 +136,7 @@ $gainsboro: #e1e1e1;
 .button-symbol {
   cursor: default;
 }
-// .button-text > span {
-//   margin-left: 22px;
-//   display: flex;
-//   padding: 4px 0px;
-// }
+
 
 // Forms
 .input-container {
