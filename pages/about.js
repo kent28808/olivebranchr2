@@ -1,5 +1,4 @@
-import ButtonWithText from "../components/ButtonWithText";
-import arrow from "../public/arrow.png";
+import ButtonWithTextAbout from "../components/ButtonWithTextAbout";
 
 export default function about() {
   return (
@@ -23,12 +22,7 @@ export default function about() {
         <h2 className='heading'>Ken T.</h2>
       </div>
 
-      <ButtonWithText
-        innerRef='/'
-        text='Return to home'
-        img={arrow}
-        imgClassName={".Vector-7"}
-      />
+      <ButtonWithTextAbout innerRef='/' text='Return to home' />
     </div>
   );
 }

@@ -1,16 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import buttonForward from "../public/svg/button_forward.svg";
+import buttonUpload from "../public/svg/button_upload.svg";
 
-export default function ButtonWithText(props) {
+export default function ButtonUpload(props) {
   return (
     <div className='button-container'>
       <div className='button-long-text'>
         <Link href={props.innerRef} passHref>
-          <span className='button-text index'>
+          <span className='button-text upload'>
             {props.text}
             <span>
-              <Image src={buttonForward} alt='arrow icon' />
+              <Image src={buttonUpload} alt='arrow icon' />
             </span>
           </span>
         </Link>

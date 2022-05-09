@@ -2,12 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import buttonForward from "../public/svg/button_forward.svg";
 
-export default function ButtonWithText(props) {
+export default function ButtonWithTextAbout(props) {
   return (
     <div className='button-container'>
       <div className='button-long-text'>
         <Link href={props.innerRef} passHref>
-          <span className='button-text index'>
+          <span className='button-text about'>
             {props.text}
             <span>
               <Image src={buttonForward} alt='arrow icon' />
