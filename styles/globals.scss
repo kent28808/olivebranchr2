@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Raleway:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Raleway:wght@400;500&family=Roboto&display=swap");
 
 // Fonts
 $alegreya-regular: "Alegreya", serif;
 $raleway-regular: "Raleway", sans-serif;
+$roboto-regular: "Roboto", sans-serif;
 
 // Primary Colors
 $redwood: #8f5949;
@@ -57,7 +58,7 @@ $gainsboro: #e1e1e1;
   font-weight: 500;
   width: 388px;
   height: 25px;
-  line-height: 1.0;
+  line-height: 1;
   text-align: center;
   cursor: default;
 }
@@ -154,7 +155,6 @@ $gainsboro: #e1e1e1;
   cursor: default;
 }
 
-
 // Forms
 .input-container {
   position: relative;
@@ -217,6 +217,27 @@ $gainsboro: #e1e1e1;
 //   padding: 20px;
 //   margin: 20px;
 // }
+
+.preview-message-container {
+  margin: auto;
+  width: 50%;
+  display: grid;
+  gap: 20.2px;
+  .bubble {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px 8.1px 12px 12px;
+    border-radius: 18px;
+    background-color: #2fcc59;
+    .message {
+      font-family: $roboto-regular;
+      white-space: pre-line;
+      color: #fff;
+    }
+  }
+}
 
 :export {
   fonts: {
