@@ -7,6 +7,7 @@ import progressBar5 from "../public/progress/progressbar_step5.png";
 
 export default function Previewmessagescreen() {
   const { message } = useContext(MessageContext);
+  const messageStr = `Hey ${message.recipientName},\n\nYou just recieved an Olive Branch from ${message.senderName}, who wants to reconnect with you. Tap the voice message below to listen!`;
 
   return (
     <div className='container'>
@@ -17,17 +18,22 @@ export default function Previewmessagescreen() {
           alt='progress bar5 logo'
         />
       </div>
-      <ButtonBack innerRef='/previewRecording' headerText='Thanks for sharing!' />
+      <ButtonBack
+        innerRef='/previewRecording'
+        headerText='Thanks for sharing!'
+      />
       <p className='body'>
-        Here's a preview of the Olive Branch that we created for you to
-        {message.recipientName}
+        Here is a preview of the Olive Branch that we created for you. Would you
+        like us to help you deliver the message?
       </p>
+      <div className='preview-message-container'>
+        <div className='bubble'>
+          <div className='message'>{messageStr}</div>
+        </div>
+        <audio src={message.blobURL} controls='controls' />
+      </div>
+      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
       <br></br>
-      <p className='body'>
-        Hey {message.recipientName}, you just recieved an Olive Branch from{" "}
-        {message.senderName}, who wants to reconnect with you. Tap the voice
-        message below to listen!
-      </p>
       <ButtonForward innerRef='/recipientNumber' />
     </div>
   );
