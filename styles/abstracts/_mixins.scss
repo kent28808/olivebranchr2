@@ -1,0 +1,10 @@
+@mixin text-styling($font-color, $font, $font-size) {
+  font-family: $font;
+  font-size: $font-size;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $font-color;
+}

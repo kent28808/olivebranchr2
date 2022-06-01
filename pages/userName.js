@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ButtonBack from "../components/ButtonBack";
+import Header from "../components/Header";
 import GetFormData from "../components/Forms/GetFormData";
 import progressBar1 from "../public/progress/progressbar_step1.png";
 
@@ -13,7 +13,7 @@ export default function Usernamescreen() {
           alt='progress bar1 logo'
         />
       </div>
-      <ButtonBack innerRef='/intro' headerText="What's your name?" />
+      <Header innerRef='/intro' headerText="What's your name?" />
       <GetFormData
         inputType='text'
         inputId='sender-name'

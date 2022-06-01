@@ -1,0 +1,15 @@
+@use "/styles/abstracts/colors" as c;
+@use "../styles/abstracts/mixins" as m;
+@use "/styles/abstracts/fonts" as f;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.heading {
+  @include m.text-styling(c.$redwood, f.$alegreya-regular, 40px);
+  line-height: 1.2;
+}
