@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { useContext } from "react";
-import { MessageContext } from "../context/MessageContext";
 import GetFormData from "../components/Forms/GetFormData";
-import progressBar2 from "../public/progress/progressbar_step2.png";
+import { MessageContext } from "../context/MessageContext";
 import ButtonBack from "../components/ButtonBack";
+import progressBar2 from "../public/progress/progressbar_step2.png";
 
 export default function Recipientnamescreen() {
   const { message } = useContext(MessageContext);

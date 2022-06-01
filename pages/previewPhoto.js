@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { useContext } from "react";
-import { MessageContext } from "../context/MessageContext";
-import ButtonForward from "../components/ButtonForward";
-import progressBar3 from "../public/progress/progressbar_step2.png";
 import ButtonBack from "../components/ButtonBack";
+import ButtonForward from "../components/ButtonForward";
+import { MessageContext } from "../context/MessageContext";
+import progressBar3 from "../public/progress/progressbar_step2.png";
 
 export default function Previewphoto() {
   const { message } = useContext(MessageContext);
@@ -19,7 +19,8 @@ export default function Previewphoto() {
       </div>{" "}
       <ButtonBack innerRef='/uploadPhoto' headerText='Looks good. Thanks!' />
       <br></br>
-      <Image src={message.imgURL}
+      <Image
+        src={message.imgURL}
         className='preview-img'
         alt='preview'
         width='500px'

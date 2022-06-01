@@ -1,8 +1,8 @@
+import Image from "next/image";
 import { useContext } from "react";
-import { MessageContext } from "../context/MessageContext";
 import GetFormData from "../components/Forms/GetFormData";
 import ButtonBack from "../components/ButtonBack";
-import Image from "next/image";
+import { MessageContext } from "../context/MessageContext";
 import progressBar6 from "../public/progress/progressbar_step6.png";
 
 export default function Recipientphonescreen() {

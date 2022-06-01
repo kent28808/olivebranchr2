@@ -1,4 +1,3 @@
-import ButtonWithText from "../components/ButtonWithText";
 import ButtonWithTextOnboarding from "../components/ButtonWithTextOnboarding";
 
 export default function initialHelpscreen() {

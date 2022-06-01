@@ -1,9 +1,8 @@
 import Image from "next/image";
+import ButtonWithTextAbout from "../components/ButtonWithTextAbout";
 import oliveBranch from "../public/confirmation/ob-image.png";
 import oliveBranch2x from "../public/confirmation/ob-image@2x.png";
 import oliveBranch3x from "../public/confirmation/ob-image@3x.png";
-import ButtonWithText from "../components/ButtonWithText";
-import ButtonWithTextAbout from "../components/ButtonWithTextAbout";
 
 export default function sentConfirmationScreen() {
   return (
