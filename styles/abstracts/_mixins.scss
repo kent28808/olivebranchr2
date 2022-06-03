@@ -1,3 +1,5 @@
+@use "/styles/abstracts/colors" as c;
+
 @mixin text-styling($font-color, $font, $font-size) {
   font-family: $font;
   font-size: $font-size;
@@ -7,4 +9,16 @@
   letter-spacing: normal;
   text-align: left;
   color: $font-color;
+}
+
+@mixin button-styling {
+  display: inline-block;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: solid 1px c.$xanadu;
+  background-color: #fff;
 }
