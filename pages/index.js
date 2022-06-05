@@ -19,7 +19,6 @@ export default function Home() {
         <Image
           src={oliveBranch}
           srcSet={`${oliveBranch2x} 2x, ${oliveBranch3x} 3x`}
-          className='OB-image'
           alt='olive branch logo'
         />
         <br />
