@@ -115,55 +115,6 @@
   cursor: default;
 }
 
-// // Forms
-.input-container {
-  position: relative;
-  padding: 20px;
-  margin: 75px;
-  .line {
-    width: 100%;
-    // height: 3px;
-    // position: absolute;
-    bottom: -8px;
-    background: c.$jet;
-
-    &:after {
-      content: "";
-      position: absolute;
-      float: right;
-      width: 100%;
-      height: 3px;
-
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-
-      background: c.$jet;
-    }
-  }
-}
-// .input-field {
-//   font-family: $raleway-regular;
-//   font-size: 40px;
-//   color: $jet;
-//   width: 650px;
-//   text-align: center;
-//   border: 0;
-//   outline: none;
-//   transition: padding 0.3s 0.2s ease;
-//   border-bottom: solid 2px $jet;
-
-//   //Do we need this?
-//   // &:focus {
-//   //   padding-bottom: 5px;
-//   // }
-
-//   &:focus + .line {
-//     &:after {
-//       transform: scaleX(1);
-//     }
-//   }
-// }
-
 // .progressbranch {
 //   width: 160px;
 //   height: 137px;
