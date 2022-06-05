@@ -12,11 +12,7 @@ export default function Previewmessagescreen() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar5}
-          className='OB-image'
-          alt='progress bar5 logo'
-        />
+        <Image src={progressBar5} alt='progress bar5 logo' />
       </div>
       <Header innerRef='/previewRecording' headerText='Thanks for sharing!' />
       <p className='body'>

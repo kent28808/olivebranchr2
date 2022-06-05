@@ -11,11 +11,7 @@ export default function Recipientnamescreen() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar2}
-          className='OB-image'
-          alt='progress bar2 logo'
-        />
+        <Image src={progressBar2} alt='progress bar2 logo' />
       </div>
       <Header
         innerRef='/userName'

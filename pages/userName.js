@@ -7,11 +7,7 @@ export default function Usernamescreen() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar1}
-          className='OB-image'
-          alt='progress bar1 logo'
-        />
+        <Image src={progressBar1} alt='progress bar1 logo' />
       </div>
       <Header innerRef='/intro' headerText="What's your name?" />
       <GetFormData

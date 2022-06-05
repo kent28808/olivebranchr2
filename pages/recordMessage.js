@@ -74,11 +74,7 @@ export default function Recordmessage() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar4}
-          className='OB-image'
-          alt='progress bar4 logo'
-        />
+        <Image src={progressBar4} alt='progress bar4 logo' />
       </div>
       <Header
         innerRef='/previewPhoto'

@@ -11,11 +11,7 @@ export default function Recipientphonescreen() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar6}
-          className='OB-image'
-          alt='progress bar6 logo'
-        />
+        <Image src={progressBar6} alt='progress bar6 logo' />
       </div>
       <Header
         innerRef='/previewMessage'

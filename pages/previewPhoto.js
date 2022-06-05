@@ -11,11 +11,7 @@ export default function Previewphoto() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar3}
-          className='OB-image'
-          alt='progress bar3 logo'
-        />
+        <Image src={progressBar3} alt='progress bar3 logo' />
       </div>{" "}
       <Header innerRef='/uploadPhoto' headerText='Looks good. Thanks!' />
       <br></br>
