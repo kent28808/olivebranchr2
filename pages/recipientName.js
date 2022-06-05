@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useContext } from "react";
+import Header from "../components/Header";
 import GetFormData from "../components/Forms/GetFormData";
 import { MessageContext } from "../context/MessageContext";
-import ButtonBack from "../components/ButtonBack";
 import progressBar2 from "../public/progress/progressbar_step2.png";
 
 export default function Recipientnamescreen() {
@@ -17,7 +17,7 @@ export default function Recipientnamescreen() {
           alt='progress bar2 logo'
         />
       </div>
-      <ButtonBack
+      <Header
         innerRef='/userName'
         headerText={`Hey ${message.senderName}, who are you reaching out to?`}
       />

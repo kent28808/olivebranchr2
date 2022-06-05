@@ -1,7 +1,7 @@
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 import Image from "next/image";
 import { useContext, useState, useEffect } from "react";
-import ButtonBack from "../components/ButtonBack";
+import Header from "../components/Header";
 import ButtonRecord from "../components/ButtonRecord";
 import ButtonStop from "../components/ButtonStop";
 import ButtonForward from "../components/ButtonForward";
@@ -80,7 +80,7 @@ export default function Recordmessage() {
           alt='progress bar4 logo'
         />
       </div>
-      <ButtonBack
+      <Header
         innerRef='/previewPhoto'
         headerText={`Next, let ${message.recipientName} hear you.`}
       />

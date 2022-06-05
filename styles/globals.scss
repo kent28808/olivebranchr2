@@ -129,23 +129,23 @@
 // //   margin: 20px;
 // // }
 
-// .preview-message-container {
-//   margin: auto;
-//   width: 50%;
-//   display: grid;
-//   gap: 20.2px;
-//   .bubble {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-start;
-//     align-items: flex-start;
-//     padding: 12px 8.1px 12px 12px;
-//     border-radius: 18px;
-//     background-color: #2fcc59;
-//     .message {
-//       font-family: $roboto-regular;
-//       white-space: pre-line;
-//       color: #fff;
-//     }
-//   }
-// }
+.preview-message-container {
+  margin: auto;
+  width: 50%;
+  display: grid;
+  gap: 20.2px;
+  .bubble {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px 8.1px 12px 12px;
+    border-radius: 18px;
+    background-color: #2fcc59;
+    .message {
+      font-family: f.$roboto-regular;
+      white-space: pre-line;
+      color: #fff;
+    }
+  }
+}

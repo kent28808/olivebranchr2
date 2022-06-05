@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useContext } from "react";
-import ButtonBack from "../components/ButtonBack";
+import Header from "../components/Header";
 import ButtonForward from "../components/ButtonForward";
 import { MessageContext } from "../context/MessageContext";
 import progressBar3 from "../public/progress/progressbar_step2.png";
@@ -17,7 +17,7 @@ export default function Previewphoto() {
           alt='progress bar3 logo'
         />
       </div>{" "}
-      <ButtonBack innerRef='/uploadPhoto' headerText='Looks good. Thanks!' />
+      <Header innerRef='/uploadPhoto' headerText='Looks good. Thanks!' />
       <br></br>
       <Image
         src={message.imgURL}

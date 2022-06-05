@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useContext } from "react";
 import GetFormData from "../components/Forms/GetFormData";
-import ButtonBack from "../components/ButtonBack";
+import Header from "../components/Header";
 import { MessageContext } from "../context/MessageContext";
 import progressBar6 from "../public/progress/progressbar_step6.png";
 
@@ -17,7 +17,7 @@ export default function Recipientphonescreen() {
           alt='progress bar6 logo'
         />
       </div>
-      <ButtonBack
+      <Header
         innerRef='/previewMessage'
         headerText={`What's ${message.recipientName}'s phone number?`}
       />

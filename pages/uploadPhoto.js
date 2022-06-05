@@ -6,7 +6,7 @@ import "@uppy/dashboard/dist/style.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useContext } from "react";
-import ButtonBack from "../components/ButtonBack";
+import Header from "../components/Header";
 import ButtonUpload from "../components/ButtonUpload";
 import { MessageContext } from "../context/MessageContext";
 import progressBar3 from "../public/progress/progressbar_step3.png";
@@ -31,7 +31,7 @@ export default function Uploadphotoscreen() {
           alt='progress bar3 logo'
         />
       </div>
-      <ButtonBack
+      <Header
         innerRef='/recipientName'
         headerText={`First, make sure ${message.recipientName} sees you.`}
       />
