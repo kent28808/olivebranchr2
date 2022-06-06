@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { MessageContext } from "../context/MessageContext";
-import GetFormData from "../components/Forms/GetFormData";
-import ButtonBack from "../components/ButtonBack";
 import Image from "next/image";
+import { useContext } from "react";
+import GetFormData from "../components/Forms/GetFormData";
+import Header from "../components/Header";
+import { MessageContext } from "../context/MessageContext";
 import progressBar6 from "../public/progress/progressbar_step6.png";
 
 export default function Recipientphonescreen() {
@@ -11,13 +11,9 @@ export default function Recipientphonescreen() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar6}
-          className='OB-image'
-          alt='progress bar6 logo'
-        />
+        <Image src={progressBar6} alt='progress bar6 logo' />
       </div>
-      <ButtonBack
+      <Header
         innerRef='/previewMessage'
         headerText={`What's ${message.recipientName}'s phone number?`}
       />

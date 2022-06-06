@@ -1,10 +1,10 @@
-import ButtonWithText from "../components/ButtonWithText";
+import styles from "../styles/Header.module.scss";
 import ButtonWithTextOnboarding from "../components/ButtonWithTextOnboarding";
 
 export default function initialHelpscreen() {
   return (
     <div className='container'>
-      <h2 className='heading'>
+      <h2 className={styles.heading}>
         Recovering from a fight with loved ones is hard.
       </h2>
       <div>
@@ -14,7 +14,7 @@ export default function initialHelpscreen() {
         </p>
       </div>
       <div>
-        <h2 className='heading'>Let us help you with that.</h2>
+        <h2 className={styles.heading}>Let us help you with that.</h2>
       </div>
       <div>
         <p className='body'>

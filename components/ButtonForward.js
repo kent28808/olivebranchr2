@@ -1,4 +1,4 @@
-import "./Button.module.scss";
+import styles from "../styles/Button.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import buttonForward from "../public/svg/button_forward.svg";

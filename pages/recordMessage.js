@@ -1,12 +1,12 @@
-import { useContext, useState, useEffect } from "react";
-import { MessageContext } from "../context/MessageContext";
-import ButtonForward from "../components/ButtonForward";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 import Image from "next/image";
-import progressBar4 from "../public/progress/progressbar_step4.png";
-import ButtonBack from "../components/ButtonBack";
+import { useContext, useState, useEffect } from "react";
+import Header from "../components/Header";
 import ButtonRecord from "../components/ButtonRecord";
 import ButtonStop from "../components/ButtonStop";
+import ButtonForward from "../components/ButtonForward";
+import { MessageContext } from "../context/MessageContext";
+import progressBar4 from "../public/progress/progressbar_step4.png";
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
@@ -74,13 +74,9 @@ export default function Recordmessage() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar4}
-          className='OB-image'
-          alt='progress bar4 logo'
-        />
+        <Image src={progressBar4} alt='progress bar4 logo' />
       </div>
-      <ButtonBack
+      <Header
         innerRef='/previewPhoto'
         headerText={`Next, let ${message.recipientName} hear you.`}
       />

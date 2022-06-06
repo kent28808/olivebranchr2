@@ -1,0 +1,24 @@
+@use "/styles/abstracts/colors" as c;
+@use "/styles/abstracts/fonts" as f;
+
+.input-container {
+  position: relative;
+  padding: 20px;
+  margin: 75px;
+}
+.input-field {
+  font-family: f.$raleway-regular;
+  font-size: 40px;
+  color: c.$jet;
+  width: 650px;
+  text-align: center;
+  border: 0;
+  outline: none;
+  transition: padding 0.3s 0.2s ease;
+  border-bottom: solid 2px c.$jet;
+
+  //Do we need this?
+  &:focus {
+    padding-bottom: 5px;
+  }
+}
