@@ -1,5 +1,6 @@
 import styles from "../styles/Header.module.scss";
 import ButtonWithTextOnboarding from "../components/ButtonWithTextOnboarding";
+import ButtonWithText from "../components/ButtonWithText";
 
 export default function initialHelpscreen() {
   return (
@@ -23,7 +24,7 @@ export default function initialHelpscreen() {
           way.
         </p>
       </div>
-      <ButtonWithTextOnboarding
+      <ButtonWithText
         innerRef='/userName'
         text='Create your own Olive Branch'
       />
