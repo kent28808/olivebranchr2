@@ -1,18 +1,15 @@
 import styles from "../styles/Button.module.scss";
 import Link from "next/link";
-import Image from "next/image";
-import buttonForward from "../public/svg/button_forward.svg";
+import ButtonForward from "./Svg/BtnFwdSvg.js";
 
 export default function NextButton(props) {
   return (
     <button className='button-next' type={props.type}>
       {props.type === "submit" ? (
-        <Image src={buttonForward} alt='button forward svg' />
+        <ButtonForward />
       ) : (
         <Link href={props.innerRef} passHref>
-          <span>
-            <Image src={buttonForward} alt='button forward svg' />
-          </span>
+          <ButtonForward />
         </Link>
       )}
     </button>

@@ -24,16 +24,6 @@
   cursor: default;
 }
 
-.button-text {
-  @include m.text-styling(c.$hunter-green, f.$raleway-regular, 25px);
-  font-weight: 500;
-  width: 388px;
-  height: 25px;
-  line-height: 1;
-  text-align: center;
-  cursor: default;
-}
-
 // .about-creators {
 //   width: 155px;
 //   height: 18px;
@@ -44,36 +34,7 @@
 // }
 
 // Buttons
-.button-long-text {
-  @include m.button-styling;
-  padding: 20px 40px;
-  border-radius: 40px;
-  border: solid 1px c.$xanadu;
-  display: flex;
-  cursor: default;
-  .index {
-    width: 503px;
-  }
-  .about {
-    width: 296px;
-  }
-  .onboarding {
-    width: 460px;
-  }
-  .upload {
-    width: 284px;
-    margin-bottom: 20px;
-  }
-  .sendbranch {
-    width: 374px;
-  }
-}
 // Long Button > Spacing
-.button-text > span {
-  margin-left: 20px;
-  // display: flex;
-  padding: 20px 0px;
-}
 
 .button-next {
   width: 93px;
@@ -93,12 +54,6 @@
   border: solid 1px c.$xanadu;
   background-color: #fff;
   cursor: default !important;
-}
-
-.button-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .button-back {

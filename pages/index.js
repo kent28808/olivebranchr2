@@ -26,6 +26,7 @@ export default function Home() {
         <ButtonWithText
           innerRef='/intro'
           text='Mending hearts with your partner'
+          page='index'
         />
         <br />
         <Link href='/about' passHref>
