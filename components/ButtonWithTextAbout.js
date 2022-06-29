@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import buttonForward from "../public/svg/button_forward.svg";
+// import buttonForward from "../public/svg/button_forward.svg";
 
 export default function ButtonWithTextAbout(props) {
   return (

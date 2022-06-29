@@ -29,7 +29,6 @@ export default function MessageProvider(props) {
   };
 
   useEffect(() => {
-    console.log("Helo");
     // If fields are blank, don't send message
     if (
       message.senderName === "" ||
