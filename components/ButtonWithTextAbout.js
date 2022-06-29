@@ -9,9 +9,9 @@ export default function ButtonWithTextAbout(props) {
         <Link href={props.innerRef} passHref>
           <span className='button-text about'>
             {props.text}
-            <span>
+            {/* <span>
               <Image src={buttonForward} alt='arrow icon' />
-            </span>
+            </span> */}
           </span>
         </Link>
       </div>

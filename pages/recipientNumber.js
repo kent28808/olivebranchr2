@@ -15,7 +15,7 @@ export default function Recipientphonescreen() {
       </div>
       <Header
         innerRef='/previewMessage'
-        headerText={`What's ${message.recipientName}'s phone number?`}
+        headerText={`Awesome. What's ${message.recipientName}'s phone number?`}
       />
       <GetFormData
         dataType='tel'
@@ -25,6 +25,7 @@ export default function Recipientphonescreen() {
         href='/sentConfirmation'
         buttonType='text'
         text='Send the Olive Branch'
+        page='recipientNumber'
       />
       <br />
       {/* <p className='body'>

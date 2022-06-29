@@ -10,7 +10,7 @@
   font-family: f.$raleway-regular;
   font-size: 40px;
   color: c.$jet;
-  width: 650px;
+  width: auto; // Affecting the width of the ButtonText component
   text-align: center;
   border: 0;
   outline: none;
