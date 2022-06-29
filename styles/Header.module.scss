@@ -10,6 +10,6 @@
 }
 
 .heading {
-  @include m.text-styling(c.$redwood, f.$alegreya-regular, 40px);
+  @include m.text-styling(c.$redwood, f.$alegreya-regular, 40px, normal);
   line-height: 1.2;
 }

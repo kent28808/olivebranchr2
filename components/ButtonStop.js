@@ -1,14 +1,14 @@
-import Image from "next/image";
-import buttonStop from "../public/svg/button_stop_recording.svg";
+import styles from "../styles/Button.module.scss";
+import BtnStopSvg from "./Svg/BtnStopSvg";
 
 export default function RecordButton(props) {
   return (
     <button
-      className='button-round'
+      className={styles["button-round"]}
       onClick={props.onClick}
       disabled={props.disabled}
     >
-      <Image src={buttonStop} alt='stop icon' />
+      <BtnStopSvg />
     </button>
   );
 }
