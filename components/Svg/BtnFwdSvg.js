@@ -1,3 +1,5 @@
+// Converted svgs into functional components to address styling issues when wrapping svg files in next.js's built-in Image component
+
 export default function ButtonForward() {
   return (
     <svg

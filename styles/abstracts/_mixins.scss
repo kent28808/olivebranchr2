@@ -1,9 +1,9 @@
 @use "/styles/abstracts/colors" as c;
 
-@mixin text-styling($font-color, $font, $font-size) {
+@mixin text-styling($font-color, $font, $font-size, $font-weight) {
   font-family: $font;
   font-size: $font-size;
-  font-weight: normal;
+  font-weight: $font-weight;
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;

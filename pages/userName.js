@@ -16,6 +16,7 @@ export default function Usernamescreen() {
         msgKey='senderName'
         href='/recipientName'
         buttonType='symbol'
+        page='userName'
       />
     </div>
   );

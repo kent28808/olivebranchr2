@@ -1,14 +1,14 @@
-import Image from "next/image";
-import buttonRecord from "../public/svg/button_recording.svg";
+import styles from "../styles/Button.module.scss";
+import BtnRecordSvg from "./Svg/BtnRecordSvg";
 
 export default function RecordButton(props) {
   return (
     <button
-      className='button-round'
+      className={styles["button-round"]}
       onClick={props.onClick}
       disabled={props.disabled}
     >
-      <Image src={buttonRecord} alt='mic icon' />
+      <BtnRecordSvg />
     </button>
   );
 }

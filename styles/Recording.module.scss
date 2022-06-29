@@ -1,0 +1,17 @@
+@use "/styles/abstracts/colors" as c;
+@use "../styles/abstracts/mixins" as m;
+@use "/styles/abstracts/fonts" as f;
+
+.commitment-script-text {
+  @include m.text-styling(c.$jet, f.$alegreya-regular, 30px, 500);
+  // width: 659.6px;
+  // height: 240px;
+  flex-grow: 0;
+  line-height: 2;
+}
+
+.confirmation-recording-text {
+  @include m.text-styling(c.$redwood, f.$alegreya-regular, 40px, normal);
+  flex-grow: 0;
+  line-height: 1;
+}

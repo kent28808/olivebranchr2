@@ -1,3 +1,4 @@
+import styles from "../styles/Recording.module.scss";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 import Image from "next/image";
 import { useContext, useState, useEffect } from "react";
@@ -88,7 +89,7 @@ export default function Recordmessage() {
       {/* If context does not have recording, show record/stop buttons. Otherwise, show a preview of the recording */}
       {message.blobURL === "" ? (
         <>
-          <p className='body'>
+          <p className={styles["commitment-script-text"]}>
             {" "}
             Hey {message.recipientName}, I want you to know that you are very
             important to me. I am committed to this relationship and I promise
@@ -110,13 +111,15 @@ export default function Recordmessage() {
         </>
       ) : (
         <>
-          <h2 className='heading'>Sounds good!</h2>
+          <h2 className={styles["confirmation-recording-text"]}>
+            Sounds good!
+          </h2>
           <audio src={message.blobURL} controls='controls' />
           <br />
         </>
       )}
       <br />
-      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
+      <p className='body'>{`${JSON.stringify(message)}`}</p>
       <ButtonForward innerRef='/previewMessage' />
     </div>
   );

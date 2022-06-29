@@ -14,12 +14,12 @@
 }
 
 .title {
-  @include m.text-styling(c.$redwood, f.$alegreya-regular, 60px);
+  @include m.text-styling(c.$redwood, f.$alegreya-regular, 60px, normal);
   line-height: 1;
 }
 
 .body {
-  @include m.text-styling(c.$jet, f.$raleway-regular, 20px);
+  @include m.text-styling(c.$jet, f.$raleway-regular, 20px, normal);
   line-height: 1.5;
   cursor: default;
 }
@@ -33,42 +33,22 @@
 //   margin-top: 68px;
 // }
 
-// Buttons
-// Long Button > Spacing
+// .button-back {
+//   gap: 10px;
+//   padding: 20px 40px;
+//   border-radius: 40px;
+//   border: solid 1px c.$xanadu;
+//   background-color: #fff;
+//   cursor: default !important;
+// }
 
-.button-next {
-  width: 93px;
-  height: 63px;
-  gap: 10px;
-  padding: 20px 40px;
-  border-radius: 40px;
-  border: solid 1px c.$xanadu;
-  background-color: #fff;
-  cursor: default !important;
-}
+// .button-back {
+//   padding-right: 11px;
+// }
 
-.button-back {
-  gap: 10px;
-  padding: 20px 40px;
-  border-radius: 40px;
-  border: solid 1px c.$xanadu;
-  background-color: #fff;
-  cursor: default !important;
-}
-
-.button-back {
-  padding-right: 11px;
-}
-
-.button-round {
-  border: none !important;
-  background-color: transparent;
-  outline: none;
-}
-
-.button-symbol {
-  cursor: default;
-}
+// .button-symbol {
+//   cursor: default;
+// }
 
 .progressbranch {
   width: 160px;
