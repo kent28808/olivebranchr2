@@ -12,9 +12,9 @@ export default function ButtonForward() {
       <path
         d='M2.43237 21.0195L11.7657 11.6862L2.43237 2.35286'
         stroke='#31542C'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   );
