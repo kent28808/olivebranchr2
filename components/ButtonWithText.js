@@ -1,20 +1,17 @@
+import styles from "../styles/Button.module.scss";
 import Link from "next/link";
-import Image from "next/image";
-import buttonForward from "../public/svg/button_forward.svg";
+import ButtonForward from "./Svg/BtnFwdSvg.js";
 
 export default function ButtonWithText(props) {
   return (
-    <div className='button-container'>
-      <div className='button-long-text'>
-        <Link href={props.innerRef} passHref>
-          <span className='button-text index'>
-            {props.text}
-            <span>
-              <Image src={buttonForward} alt='arrow icon' />
-            </span>
-          </span>
-        </Link>
+    <Link href={props.innerRef} passHref>
+      {/* Using brackets instead of dot notation to address hypentated CSS class names */}
+      <div className={styles["button-container"]}>
+        <span className={`${styles["button-text"]} ${props.page}`}>
+          {props.text}
+        </span>
+        <ButtonForward />
       </div>
-    </div>
+    </Link>
   );
 }

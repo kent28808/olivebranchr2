@@ -1,9 +1,10 @@
+import styles from "../../styles/Form.module.scss";
 import { useContext } from "react";
 import { MessageContext } from "../../context/MessageContext";
 import { useRouter } from "next/router";
 import ButtonForward from "../ButtonForward";
 import ButtonWithText from "../ButtonWithText";
-import ButtonWithTextSendBranch from "../ButtonWithTextSendBranch"
+// import ButtonWithTextSendBranch from "../ButtonWithTextSendBranch";
 
 export default function GetFormData(props) {
   const { setMessageValues } = useContext(MessageContext);
@@ -19,9 +20,9 @@ export default function GetFormData(props) {
 
   return (
     <form onSubmit={(e) => handleSubmit(props.msgKey, e)}>
-      <div className='input-container'>
+      <div className={styles["input-container"]}>
         <input
-          className='input-field'
+          className={styles["input-field"]}
           type={props.inputType}
           id={props.inputId}
           name={props.msgKey}
@@ -30,7 +31,11 @@ export default function GetFormData(props) {
       </div>
       <div className='button-container'>
         {props.buttonType === "text" ? (
-          <ButtonWithTextSendBranch innerRef={props.href} text={props.text} />
+          <ButtonWithText
+            innerRef={props.href}
+            text={props.text}
+            page={props.page}
+          />
         ) : (
           <ButtonForward type='submit' />
         )}

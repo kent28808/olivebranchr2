@@ -1,12 +1,13 @@
-import { useContext, useState, useEffect } from "react";
-import { MessageContext } from "../context/MessageContext";
-import ButtonForward from "../components/ButtonForward";
+import styles from "../styles/Recording.module.scss";
 import MicRecorder from "mic-recorder-to-mp3"; // https://www.npmjs.com/package/mic-recorder-to-mp3
 import Image from "next/image";
-import progressBar4 from "../public/progress/progressbar_step4.png";
-import ButtonBack from "../components/ButtonBack";
+import { useContext, useState, useEffect } from "react";
+import Header from "../components/Header";
 import ButtonRecord from "../components/ButtonRecord";
 import ButtonStop from "../components/ButtonStop";
+import ButtonForward from "../components/ButtonForward";
+import { MessageContext } from "../context/MessageContext";
+import progressBar4 from "../public/progress/progressbar_step4.png";
 
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 
@@ -74,13 +75,9 @@ export default function Recordmessage() {
   return (
     <div className='container'>
       <div className='progressbranch'>
-        <Image
-          src={progressBar4}
-          className='OB-image'
-          alt='progress bar4 logo'
-        />
+        <Image src={progressBar4} alt='progress bar4 logo' />
       </div>
-      <ButtonBack
+      <Header
         innerRef='/previewPhoto'
         headerText={`Next, let ${message.recipientName} hear you.`}
       />
@@ -92,7 +89,7 @@ export default function Recordmessage() {
       {/* If context does not have recording, show record/stop buttons. Otherwise, show a preview of the recording */}
       {message.blobURL === "" ? (
         <>
-          <p className='body'>
+          <p className={styles["commitment-script-text"]}>
             {" "}
             Hey {message.recipientName}, I want you to know that you are very
             important to me. I am committed to this relationship and I promise
@@ -114,13 +111,15 @@ export default function Recordmessage() {
         </>
       ) : (
         <>
-          <h2 className='heading'>Sounds good!</h2>
+          <h2 className={styles["confirmation-recording-text"]}>
+            Sounds good!
+          </h2>
           <audio src={message.blobURL} controls='controls' />
           <br />
         </>
       )}
       <br />
-      {/* <p className='body'>{`${JSON.stringify(message)}`}</p> */}
+      <p className='body'>{`${JSON.stringify(message)}`}</p>
       <ButtonForward innerRef='/previewMessage' />
     </div>
   );

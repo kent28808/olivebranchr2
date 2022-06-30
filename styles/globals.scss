@@ -1,17 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Alegreya&family=Raleway:wght@400;500&display=swap");
-
-// Fonts
-$alegreya-regular: "Alegreya", serif;
-$raleway-regular: "Raleway", sans-serif;
-
-// Primary Colors
-$redwood: #8f5949;
-$hunter-green: #31542c;
-$jet: #333;
-
-// Secondary Colors
-$xanadu: #7a8778;
-$gainsboro: #e1e1e1;
+@use "/styles/abstracts/colors" as c;
+@use "../styles/abstracts/mixins" as m;
+@use "/styles/abstracts/fonts" as f;
 
 // All Pages
 .container {
@@ -24,41 +13,14 @@ $gainsboro: #e1e1e1;
   margin: auto auto;
 }
 
-// Text
-@mixin text-styling($font-color, $font, $font-size) {
-  font-family: $font;
-  font-size: $font-size;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: $font-color;
-}
-
 .title {
-  @include text-styling($redwood, $alegreya-regular, 60px);
+  @include m.text-styling(c.$redwood, f.$alegreya-regular, 60px, normal);
   line-height: 1;
 }
 
-.heading {
-  @include text-styling($redwood, $alegreya-regular, 40px);
-  line-height: 1.2;
-}
-
 .body {
-  @include text-styling($jet, $raleway-regular, 20px);
+  @include m.text-styling(c.$jet, f.$raleway-regular, 20px, normal);
   line-height: 1.5;
-  cursor: default;
-}
-
-.button-text {
-  @include text-styling($hunter-green, $raleway-regular, 25px);
-  font-weight: 500;
-  width: 388px;
-  height: 25px;
-  line-height: 1.0;
-  text-align: center;
   cursor: default;
 }
 
@@ -70,139 +32,23 @@ $gainsboro: #e1e1e1;
 //   color: #333;
 //   margin-top: 68px;
 // }
-// Buttons
-@mixin button-styling {
-  display: inline-block;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 20px 40px;
-  border-radius: 40px;
-  border: solid 1px $xanadu;
-  background-color: #fff;
-}
-
-.button-long-text {
-  @include button-styling;
-  padding: 20px 40px;
-  border-radius: 40px;
-  border: solid 1px $xanadu;
-  display: flex;
-  cursor: default;
-  .index {
-    width: 503px;
-  }
-  .about {
-    width: 296px;
-  }
-  .onboarding {
-    width: 460px;
-  }
-  .upload {
-    width: 284px;
-    margin-bottom: 20px;
-  }
-  .sendbranch {
-    width: 374px;
-  }
-}
-// Long Button > Spacing
-.button-text > span {
-  margin-left: 20px;
-  // display: flex;
-  padding: 20px 0px;
-}
-
-.button-next {
-  width: 93px;
-  height: 63px;
-  gap: 10px;
-  padding: 20px 40px;
-  border-radius: 40px;
-  border: solid 1px $xanadu;
-  background-color: #fff;
-  cursor: default !important;
-}
 
 // .button-back {
 //   gap: 10px;
 //   padding: 20px 40px;
 //   border-radius: 40px;
-//   border: solid 1px $xanadu;
+//   border: solid 1px c.$xanadu;
 //   background-color: #fff;
 //   cursor: default !important;
 // }
 
-.button-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .button-back {
+//   padding-right: 11px;
+// }
 
-.button-back {
-  padding-right: 11px;
-}
-
-.button-round {
-  border: none !important;
-  background-color: transparent;
-  outline: none;
-}
-
-.button-symbol {
-  cursor: default;
-}
-
-
-// Forms
-.input-container {
-  position: relative;
-  padding: 20px;
-  margin: 75px;
-  .line {
-    width: 100%;
-    // height: 3px;
-    // position: absolute;
-    bottom: -8px;
-    background: $jet;
-
-    &:after {
-      content: "";
-      position: absolute;
-      float: right;
-      width: 100%;
-      height: 3px;
-
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-
-      background: $jet;
-    }
-  }
-}
-.input-field {
-  font-family: $raleway-regular;
-  font-size: 40px;
-  color: $jet;
-  width: 650px;
-  text-align: center;
-  border: 0;
-  outline: none;
-  transition: padding 0.3s 0.2s ease;
-  border-bottom: solid 2px $jet;
-
-  //Do we need this?
-  // &:focus {
-  //   padding-bottom: 5px;
-  // }
-
-  &:focus + .line {
-    &:after {
-      transform: scaleX(1);
-    }
-  }
-}
+// .button-symbol {
+//   cursor: default;
+// }
 
 .progressbranch {
   width: 160px;
@@ -212,22 +58,23 @@ $gainsboro: #e1e1e1;
   margin-right: 874px;
 }
 
-// Image
-// .OB-image {
-//   padding: 20px;
-//   margin: 20px;
-// }
-
-:export {
-  fonts: {
-    alegreyaregular: $alegreya-regular;
-    ralewayregular: $raleway-regular;
-  }
-  colors: {
-    redwood: $redwood;
-    huntergreen: $hunter-green;
-    jet: $jet;
-    xanadu: $xanadu;
-    gainsboro: $gainsboro;
+.preview-message-container {
+  margin: auto;
+  width: 50%;
+  display: grid;
+  gap: 20.2px;
+  .bubble {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 12px 8.1px 12px 12px;
+    border-radius: 18px;
+    background-color: #2fcc59;
+    .message {
+      font-family: f.$roboto-regular;
+      white-space: pre-line;
+      color: #fff;
+    }
   }
 }

@@ -1,0 +1,63 @@
+@use "/styles/abstracts/colors" as c;
+@use "../styles/abstracts/mixins" as m;
+@use "/styles/abstracts/fonts" as f;
+
+.button-container {
+  @include m.button-styling;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // gap: 10px;
+}
+
+.button-text {
+  @include m.text-styling(c.$hunter-green, f.$raleway-regular, 25px, normal);
+  font-weight: 500;
+  // width: 388px;
+  // height: 25px;
+  line-height: 1;
+  text-align: center;
+  cursor: default;
+}
+
+.button-next {
+  width: 93px;
+  height: 63px;
+  gap: 10px;
+  padding: 20px 40px;
+  border-radius: 40px;
+  border: solid 1px c.$xanadu;
+  background-color: #fff;
+  cursor: default !important;
+}
+
+.button-round {
+  border: none !important;
+  background-color: transparent;
+  outline: none;
+}
+
+// Buttons
+// .button-long-text {
+//   cursor: default;
+//   .about {
+//     width: 296px;
+//   }
+//   .onboarding {
+//     width: 460px;
+//   }
+//   .upload {
+//     width: 284px;
+//     margin-bottom: 20px;
+//   }
+//   .sendbranch {
+//     width: 374px;
+//   }
+// }
+
+// .button-text > span {
+//   // margin-left: 20px;
+//   // display: flex;
+//   padding: 20px 0px;
+// }
